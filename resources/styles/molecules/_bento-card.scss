@@ -1,0 +1,203 @@
+.bento-card {
+  $self: &;
+
+  border-radius: 24px;
+  overflow: hidden;
+  min-height: 480px;
+
+  @include media-breakpoint-down(lg) {
+    min-height: unset;
+  }
+
+  &__title,
+  &__text {
+    color: $white;
+  }
+
+  &__text-content-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text {
+    margin-top: 24px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 20px;
+    }
+  }
+
+  &__button {
+    margin-top: 24px;
+  }
+
+  &_with-image {
+    display: flex;
+    column-gap: 12px;
+
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+      row-gap: 32px;
+    }
+
+    #{$self}__text-content-wrapper {
+      padding: 103px 0 103px 60px;
+      max-width: 400px;
+
+      @include media-breakpoint-down(xxl) {
+        max-width: 100%;
+      }
+
+      @include media-breakpoint-down(lg) {
+        padding: 40px 16px 0;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+    #{$self}__image-wrapper {
+      margin-top: auto;
+      max-height: 480px;
+      max-width: 300px;
+      width: 100%;
+
+      @include media-breakpoint-down(lg) {
+        max-height: unset;
+        max-width: 100%;
+      }
+    }
+
+    #{$self}__image {
+      &_desktop {
+        @include aspect-ratio-pseudo(300, 480);
+
+        @include media-breakpoint-down(lg) {
+          display: none;
+        }
+      }
+
+      &_mobile {
+        display: none;
+        @include aspect-ratio-pseudo(327, 258);
+
+        @include media-breakpoint-down(lg) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &_with-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 48px;
+
+    @include media-breakpoint-down(lg) {
+      padding: 40px 16px;
+    }
+
+    #{$self}__icon-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 48px;
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.1) 100%);
+      border-radius: 16px;
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 36px;
+        width: 48px;
+        height: 48px;
+        border-radius: 8px;
+      }
+
+      img {
+        width: 32px;
+        height: 32px;
+
+        @include media-breakpoint-down(lg) {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    #{$self}__text-content-wrapper {
+      align-items: center;
+      text-align: center;
+      max-width: 505px;
+    }
+  }
+}
+
+.bento-cards .bento-card:first-child {
+  column-gap: 40px;
+
+  .bento-card__text-content-wrapper {
+    max-width: 420px;
+
+    @include media-breakpoint-down(xxl) {
+      max-width: 100%;
+    }
+  }
+
+  .bento-card__image-wrapper {
+    max-width: 436px;
+
+    @include media-breakpoint-down(lg) {
+      max-width: 100%;
+      padding-left: 16px;
+    }
+  }
+
+  .bento-card__image {
+    &_desktop {
+      @include aspect-ratio-pseudo(436, 480);
+    }
+
+    &_mobile {
+      @include aspect-ratio-pseudo(327, 258);
+    }
+  }
+}
+
+.bento-cards_3-cards .bento-card:first-child {
+  column-gap: 98px;
+
+  @include media-breakpoint-down(xxl) {
+    column-gap: 40px;
+  }
+
+  .bento-card__text-content-wrapper {
+    max-width: 582px;
+
+    @include media-breakpoint-down(xxl) {
+      max-width: 50%;
+    }
+
+    @include media-breakpoint-down(lg) {
+      max-width: 100%;
+    }
+  }
+
+  .bento-card__image-wrapper {
+    max-width: 760px;
+
+    @include media-breakpoint-down(lg) {
+      max-width: 100%;
+    }
+  }
+
+  .bento-card__image {
+    &_desktop {
+      @include aspect-ratio-pseudo(760, 480);
+    }
+
+    &_mobile {
+      @include aspect-ratio-pseudo(327, 258);
+    }
+  }
+}

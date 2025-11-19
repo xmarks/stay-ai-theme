@@ -1,0 +1,170 @@
+@mixin typography {
+  font-family: $font;
+  font-style: normal;
+}
+
+@mixin typo-headline-1 {
+  @include typography;
+  font-size: 70px;
+  line-height: 95%;
+  font-weight: 550;
+  letter-spacing: -0.03em;
+
+  @include media-breakpoint-down(lg) {
+    --wp--preset--font-size--headline-1: 42px;
+    font-size: 42px;
+  }
+}
+
+@mixin typo-headline-2 {
+  @include typography;
+  font-size: 56px;
+  line-height: 95%;
+  font-weight: 550;
+  letter-spacing: -0.02em;
+
+  @include media-breakpoint-down(lg) {
+    --wp--preset--font-size--headline-2: 34px;
+    font-size: 34px;
+  }
+}
+
+@mixin typo-headline-3 {
+  @include typography;
+  font-size: 42px;
+  line-height: 105%;
+  font-weight: 550;
+  letter-spacing: -0.01em;
+
+  @include media-breakpoint-down(lg) {
+    --wp--preset--font-size--headline-3: 28px;
+    font-size: 28px;
+  }
+}
+
+@mixin typo-headline-4 {
+  @include typography;
+  font-size: 32px;
+  line-height: 110%;
+  font-weight: 500;
+
+  @include media-breakpoint-down(lg) {
+    --wp--preset--font-size--headline-4: 24px;
+    font-size: 24px;
+  }
+}
+
+@mixin typo-body-1 {
+  @include typography;
+  font-size: 22px;
+  line-height: 150%;
+  font-weight: 300;
+
+  @include media-breakpoint-down(lg) {
+    --wp--preset--font-size--body-1: 18px;
+    font-size: 18px;
+  }
+}
+
+@mixin typo-body-2 {
+  @include typography;
+  font-size: 20px;
+  line-height: 150%;
+  font-weight: 300;
+
+  @include media-breakpoint-down(lg) {
+    --wp--preset--font-size--body-2: 16px;
+    font-size: 16px;
+  }
+}
+
+@mixin typo-body-3 {
+  @include typography;
+  font-size: 18px;
+  line-height: 27px;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@mixin typo-subtitle-1 {
+  @include typography;
+  font-size: 24px;
+  line-height: 110%;
+  font-weight: 550;
+  letter-spacing: -0.01em;
+
+  @include media-breakpoint-down(lg) {
+    --wp--preset--font-size--headline-5: 20px;
+    font-size: 20px;
+  }
+}
+
+@mixin typo-subtitle-2 {
+  @include typography;
+  font-size: 20px;
+  line-height: 115%;
+  font-weight: 500;
+
+  @include media-breakpoint-down(lg) {
+    --wp--preset--font-size--subtitle-2: 16px;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+@mixin typo-caption-1 {
+  @include typography;
+  font-size: 14px;
+  line-height: 115%;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  @include media-breakpoint-down(lg) {
+    --wp--preset--font-size--caption-1: 13px;
+    font-size: 13px;
+  }
+}
+
+@mixin typo-caption-2 {
+  @include typography;
+  font-size: 14px;
+  line-height: 115%;
+  font-weight: 350;
+
+  @include media-breakpoint-down(lg) {
+    --wp--preset--font-size--caption-2: 13px;
+    font-size: 13px;
+  }
+}
+
+@mixin typo-caption-3 {
+  @include typography;
+  font-size: 14px;
+  line-height: 115%;
+  font-weight: 600;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 13px;
+  }
+}
+
+@mixin typo-button {
+  @include typography;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+@mixin typo-button-underline {
+  @include typo-button;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 16px;
+    line-height: 17.78px;
+  }
+}

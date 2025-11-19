@@ -1,0 +1,56 @@
+.experts-team-card {
+  display: flex;
+  flex-direction: column;
+
+  &__image {
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+
+    img {
+      aspect-ratio: 377 / 360;
+      object-fit: cover;
+
+      @include media-breakpoint-down(lg) {
+        aspect-ratio: 343 / 300;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 32px;
+    align-items: flex-start;
+
+    @include media-breakpoint-down(lg) {
+      gap: 12px;
+    }
+  }
+
+  &__logo {
+    flex-shrink: 0;
+    max-height: 34px;
+    height: 100%;
+  }
+
+  &__text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @include media-breakpoint-down(lg) {
+      gap: 6px;
+    }
+  }
+
+  &__position {
+    opacity: 0.6;
+  }
+
+  &_link {
+    all: unset;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,75 @@
+.swiper-navigation-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  color: $pink-06;
+  background-color: $pink-01;
+  cursor: pointer;
+  transition: background-color $delaySm ease-in-out;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 24px;
+    aspect-ratio: 1 / 1;
+    mask-image: url($icons + '/arrow-down.svg');
+    mask-position: center;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    background-color: currentColor;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $pink-02;
+    }
+  }
+
+  &_prev {
+    &::before {
+      rotate: 90deg;
+    }
+  }
+
+  &_next {
+    &::before {
+      rotate: -90deg;
+    }
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+
+  &_large {
+    width: 60px;
+    height: 60px;
+
+    @include media-breakpoint-down(xl) {
+      width: 50px;
+      height: 50px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      width: 40px;
+      height: 40px;
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0;
+      visibility: hidden;
+      transition:
+        opacity $delaySm ease,
+        visibility $delaySm ease;
+
+        @include media-breakpoint-down(lg) {
+          opacity: 0.4;
+          visibility: visible;
+        }
+    }
+  }
+}

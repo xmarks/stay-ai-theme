@@ -1,0 +1,26 @@
+@import '@node_modules/bootstrap/scss/containers';
+@import '@node_modules/bootstrap/scss/grid';
+@import '@node_modules/bootstrap/scss/utilities/api';
+
+// * set var(--bs-gutter-x) to be equal to its breakpoint beside the default `xs`
+@each $breakpoint, $container-padding-x in $container-paddings-x {
+  @if $breakpoint !=xs {
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+      .container,
+      .container-fluid {
+        --bs-gutter-x: #{$container-padding-x};
+      }
+    }
+  }
+}
+
+// * set var(--bs-gutter-x) to be equal to its breakpoint beside the default `xs`
+@each $breakpoint, $grid-gutter-width in $grid-gutter-widths {
+  @if $breakpoint !=xs {
+    @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+      .row {
+        --bs-gutter-x: #{$grid-gutter-width};
+      }
+    }
+  }
+}

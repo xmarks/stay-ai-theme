@@ -1,0 +1,25 @@
+@import '../molecules/review-item';
+
+.reviews {
+  &__wrapper {
+    columns: 2;
+    column-gap: 20px;
+
+    @include media-breakpoint-down(lg) {
+      columns: 1;
+
+      & > :last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__load-more {
+    margin: 80px auto 0 auto;
+
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+      margin: 40px 0 0 0;
+    }
+  }
+}

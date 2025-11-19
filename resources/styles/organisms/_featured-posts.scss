@@ -1,0 +1,8 @@
+@import '../molecules/feature-post-card';
+.featured-posts {
+  &__slider {
+    .swiper {
+      overflow: initial;
+    }
+  }
+}

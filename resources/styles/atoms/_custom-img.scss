@@ -1,0 +1,17 @@
+.custom-img {
+  width: 100%;
+
+  &_desktop {
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+
+  &_mobile {
+    display: none;
+
+    @include media-breakpoint-down(lg) {
+      display: block;
+    }
+  }
+}

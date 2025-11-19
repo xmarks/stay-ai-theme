@@ -1,0 +1,53 @@
+.video-play-btn {
+  display: none;
+  opacity: 0;
+  width: 68px;
+  height: 68px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  border-radius: 58px;
+  background-color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+    opacity 0.3s ease,
+    display 0.3s ease allow-discrete;
+  box-shadow:
+    0px 100px 80px 0px rgba(0, 0, 0, 0.07),
+    0px 41.778px 33.422px 0px rgba(0, 0, 0, 0.05),
+    0px 22.336px 17.869px 0px rgba(0, 0, 0, 0.04),
+    0px 12.522px 10.017px 0px rgba(0, 0, 0, 0.04),
+    0px 6.65px 5.32px 0px rgba(0, 0, 0, 0.03),
+    0px 2.767px 2.214px 0px rgba(0, 0, 0, 0.02);
+
+  svg {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+  }
+
+  &.is-visible {
+    display: flex;
+    opacity: 1;
+  }
+
+  @include media-breakpoint-down(lg) {
+    width: 44px;
+    height: 44px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+@starting-style {
+  .video-play-btn.is-visible {
+    opacity: 0;
+  }
+}

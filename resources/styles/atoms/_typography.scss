@@ -1,0 +1,71 @@
+h1,
+.typo-headline-1,
+.has-headline-1-font-size {
+  @include typo-headline-1;
+}
+
+h2,
+.typo-headline-2,
+.has-headline-2-font-size {
+  @include typo-headline-2;
+}
+
+h3,
+.typo-headline-3,
+.has-headline-3-font-size {
+  @include typo-headline-3;
+}
+
+h4,
+.typo-headline-4,
+.has-headline-4-font-size {
+  @include typo-headline-4;
+}
+
+.typo-body-1,
+.has-body-1-font-size {
+  @include typo-body-1;
+}
+
+.typo-body-2,
+.has-body-2-font-size {
+  @include typo-body-2;
+}
+
+.typo-body-3,
+.has-body-3-font-size {
+  @include typo-body-3;
+}
+
+h5,
+.typo-subtitle-1,
+.has-headline-5-font-size {
+  @include typo-subtitle-1;
+}
+
+h6,
+.typo-subtitle-2,
+.has-headline-6-font-size {
+  @include typo-subtitle-2;
+}
+
+.typo-caption-1 {
+  @include typo-caption-1;
+}
+
+.typo-caption-2,
+.has-caption-2-font-size {
+  @include typo-caption-2;
+}
+
+.typo-caption-3 {
+  @include typo-caption-3;
+}
+
+.typo-button {
+  @include typo-button;
+}
+
+.typo-button-underline {
+  @include typo-button-underline;
+}

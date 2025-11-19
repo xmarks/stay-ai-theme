@@ -1,0 +1,13 @@
+@import '../molecules/custom-list-item';
+
+.custom-list {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @include media-breakpoint-down(lg) {
+      gap: 20px;
+    }
+  }
+}

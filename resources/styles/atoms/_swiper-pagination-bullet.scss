@@ -1,0 +1,12 @@
+.swiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba($pink-06, 0.35);
+  transition: background-color $delaySm ease-in-out;
+  --swiper-pagination-bullet-horizontal-gap: 6px;
+
+  &-active {
+    background-color: $pink-06;
+  }
+}

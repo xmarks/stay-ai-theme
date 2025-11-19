@@ -1,0 +1,42 @@
+#menu-to-edit {
+  [data-name='bold_type'],
+  [data-name='icon_enabled'],
+  [data-name='cards_enabled'] {
+    display: none;
+  }
+
+  .menu-item-depth-0 > .menu-item-settings > .acf-fields {
+    [data-name='cards_enabled'] {
+      display: block;
+    }
+  }
+
+  .menu-item > .menu-item-settings > .acf-fields {
+    .acf-field-678f8e884e98d {
+      display: block;
+    }
+  }
+
+  .menu-item-depth-1,
+  .menu-item-depth-2,
+  .menu-item-depth-3 {
+    & > .menu-item-settings {
+      & > .acf-fields {
+        [data-name='icon_enabled'] {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .menu-item-depth-2,
+  .menu-item-depth-3 {
+    & > .menu-item-settings {
+      & > .acf-fields {
+        [data-name='bold_type'] {
+          display: block;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@mixin hbspt-input {
+  appearance: none;
+  width: 100% !important;
+  padding: 9px 11px;
+  background-color: $white;
+  border-radius: 8px;
+  border: 1px solid $charcoal-03;
+  @include typo-body-3;
+  font-weight: 300;
+
+  &::placeholder {
+    color: rgba($black, 0.6);
+  }
+
+  &:focus {
+    outline: 2px solid $pink-05;
+  }
+
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px $white inset;
+  }
+}
+
+@mixin hbspt-input-error {
+  border-color: $neon-strawberry-02;
+}

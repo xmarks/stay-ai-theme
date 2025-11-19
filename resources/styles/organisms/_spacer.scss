@@ -1,0 +1,9 @@
+.spacer {
+  margin: var(--desktopMargin);
+  height: var(--desktopHeight);
+
+  @include media-breakpoint-down(lg) {
+    margin: var(--mobileMargin);
+    height: var(--mobileHeight);
+  }
+}

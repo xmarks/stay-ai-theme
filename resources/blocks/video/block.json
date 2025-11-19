@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/video",
+  "title": "Video",
+  "category": "theme",
+  "icon": "format-video",
+  "acf": {
+    "mode": "edit"
+  },
+  "supports": {
+    "align": false,
+    "jsx": true
+  },
+  "style": "video"
+}

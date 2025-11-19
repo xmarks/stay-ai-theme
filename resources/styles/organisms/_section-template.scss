@@ -1,0 +1,12 @@
+.section-template {
+  position: relative;
+  overflow: clip;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: var(--border-radius-desktop);
+
+  @include media-breakpoint-down(lg) {
+    border-radius: var(--border-radius-mobile);
+    background-position: top center;
+  }
+}

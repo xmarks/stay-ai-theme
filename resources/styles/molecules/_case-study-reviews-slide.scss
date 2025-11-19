@@ -1,0 +1,114 @@
+.case-study-reviews-slide {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-column-gap: 20px;
+
+  @include media-breakpoint-down(xxl) {
+    align-items: center;
+  }
+
+  @include media-breakpoint-down(lg) {
+    display: flex;
+    flex-direction: column;
+    align-items: unset;
+    row-gap: 28px;
+    height: 100%;
+  }
+
+  &__left {
+    grid-column: 1 / span 4;
+
+    @include media-breakpoint-down(lg) {
+      grid-column: unset;
+    }
+  }
+
+  &__image {
+    border-radius: 20px;
+    overflow: hidden;
+    @include aspect-ratio-pseudo(465, 486);
+
+    @include media-breakpoint-down(lg) {
+      @include aspect-ratio-pseudo(320, 340);
+    }
+  }
+
+  &__right {
+    grid-column: 5 / span 6;
+    padding-left: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    @include media-breakpoint-down(lg) {
+      grid-column: unset;
+      padding-left: unset;
+      height: unset;
+    }
+  }
+
+  &__logo {
+    max-height: 34px;
+    align-self: flex-start;
+    width: auto;
+    object-fit: contain;
+    margin-bottom: 30px;
+
+    @include media-breakpoint-down(xl) {
+      margin-bottom: 17px;
+      max-height: 32px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 32px;
+    @include typo-headline-3;
+
+    @include media-breakpoint-down(xl) {
+      @include typo-subtitle-1;
+    }
+
+    @include media-breakpoint-down(lg) {
+      padding-right: 8px;
+    }
+  }
+
+  &__text {
+    color: rgba($black, 0.7);
+    @include typo-body-2;
+
+    @include media-breakpoint-down(xl) {
+      @include typo-body-3;
+    }
+
+    @include media-breakpoint-down(lg) {
+      padding-right: 8px;
+    }
+  }
+
+  &__author {
+    margin-top: 24px;
+
+    @include media-breakpoint-down(xl) {
+      margin-top: 16px;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  &__author-name {
+    margin-bottom: 4px;
+  }
+
+  &__button {
+    margin-top: 32px;
+
+    @include media-breakpoint-down(xl) {
+      margin-top: 24px;
+    }
+
+  }
+}

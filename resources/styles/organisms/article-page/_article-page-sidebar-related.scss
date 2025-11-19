@@ -1,0 +1,87 @@
+.article-page-sidebar-related {
+  position: sticky;
+  z-index: 5;
+  top: 156px;
+  right: 0;
+  margin-bottom: 280px;
+
+  @include media-breakpoint-down(lg) {
+    margin-bottom: unset;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 36px;
+    color: $black;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  .blog-article-preview-card {
+    $self: &;
+    color: inherit;
+  
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+  
+      @include media-breakpoint-down(lg) {
+        gap: 24px;
+      }
+    }
+  
+    .img {
+      overflow: hidden;
+      border-radius: 20px;
+      @include aspect-ratio-pseudo(458, 297);
+  
+      @include media-breakpoint-down(lg) {
+        @include aspect-ratio-pseudo(343, 210);
+      }
+    }
+  
+    &__text {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+  
+      @include media-breakpoint-down(lg) {
+        padding: 0 8px;
+      }
+    }
+  
+    &__tags {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      text-align: center;
+      gap: 8px;
+      opacity: 0.7;
+    }
+
+    &__title {
+      @include media-breakpoint-up(lg) {
+        @include text-wrap(3);
+      }
+    }
+  
+    .alternative-cover {    
+      &__icon {
+        width: 24px;
+        height: 24px;
+      }
+  
+      &__text {
+        font-size: 22px;
+        line-height: 22px;
+        @include text-wrap(3);
+      }
+    }
+  }
+}

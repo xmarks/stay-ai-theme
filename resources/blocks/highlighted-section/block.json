@@ -1,0 +1,19 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/highlighted-section",
+  "title": "Highlighted Section",
+  "category": "theme",
+  "icon": "block-default",
+  "acf": {
+    "mode": "preview",
+    "postTypes": [
+      "post",
+      "app_case_study"
+    ]
+  },
+  "supports": {
+    "align": false,
+    "jsx": true
+  },
+  "style": "highlighted-section"
+}

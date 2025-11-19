@@ -1,0 +1,30 @@
+@import '../atoms/chips-item';
+
+.chips {
+  padding: 48px 0;
+
+  @include media-breakpoint-down(lg) {
+    padding: 16px 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+
+    @include media-breakpoint-down(lg) {
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      overflow-x: auto;
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}

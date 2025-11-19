@@ -1,0 +1,87 @@
+.pricing-card {
+  padding: 40px 32px;
+  border-radius: 24px;
+  min-height: 785px;
+  background-color: $charcoal-01;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include media-breakpoint-down(lg) {
+    padding: 32px 20px;
+    border-radius: 20px;
+    min-height: unset;
+  }
+
+  &__text {
+    margin-top: 16px;
+  }
+
+  &__list {
+    margin-top: 44px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 32px;
+    }
+
+    li + li {
+      margin-top: 24px;
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 20px;
+      }
+    }
+
+    li {
+      padding-left: 32px;
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        mask-image: url($icons + '/check.svg');
+        background-color: $pink-06;
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__footer {
+    margin-top: calc(44px + var(--mt_desktop));
+
+    @include media-breakpoint-down(lg) {
+      margin-top: calc(32px + var(--mt_mobile));
+    }
+  }
+
+  &__price + &__button {
+    margin-top: 32px;
+  }
+
+  &__price-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__price-caption {
+    margin-top: 8px;
+    opacity: 0.6;
+  }
+
+  &__price-description {
+    margin-top: 12px;
+  }
+
+  &__button {
+    width: 100% !important;
+  }
+
+  &_active {
+    background-color: $pink-01;
+  }
+}

@@ -1,0 +1,87 @@
+.article-page-banner {
+  $self: &;
+  margin: 120px 0;
+
+  @include media-breakpoint-down(lg) {
+    margin: 80px 0 60px;
+  }
+
+  &__text-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    margin-top: 24px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: unset;
+      row-gap: 24px;
+
+      & > *:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__tag {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: $pink-06;
+    @include typo-caption-1;
+
+    span {
+      @include media-breakpoint-down(lg) {
+        white-space: nowrap;
+      }
+
+      &:nth-child(2) {
+        @include media-breakpoint-down(lg) {
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+
+    & > * {
+      display: block;
+      color: inherit;
+
+      &:not(:first-child) {
+        position: relative;
+        padding-left: 7px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 1.5px;
+          height: 100%;
+          background-color: currentColor;
+        }
+      }
+    }
+  }
+
+  &__text {
+    color: rgba($black, 0.7);
+  }
+
+  &__image {
+    border-radius: 24px;
+    overflow: hidden;
+
+    @include media-breakpoint-down(lg) {
+      border-radius: 20px;
+      margin-top: 32px;
+    }
+
+    img {
+      border-radius: 24px;
+
+      @include media-breakpoint-down(lg) {
+        border-radius: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/brief-description",
+  "title": "Brief Description",
+  "category": "theme",
+  "icon": "media-text",
+  "acf": {
+    "mode": "edit",
+    "postTypes": ["app_resource"]
+  },
+  "supports": {
+    "align": false,
+    "jsx": true
+  },
+  "style": "brief-description"
+}

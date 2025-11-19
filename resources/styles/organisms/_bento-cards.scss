@@ -1,0 +1,114 @@
+@import '../molecules/bento-card';
+
+.bento-cards {
+  $self: &;
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    & > * {
+      &:nth-child(1) {
+        width: calc(62.8% - 8px);
+        background-color: $neon-strawberry-02;
+        background-image: url($images + '/static/pattern-v.svg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include media-breakpoint-down(xxl) {
+          width: 100%;
+        }
+
+        @include media-breakpoint-down(lg) {
+          order: 1;
+        }
+      }
+
+      &:nth-child(2) {
+        width: calc(37% - 8px);
+        background-color: $pink-04;
+
+        @include media-breakpoint-down(xxl) {
+          width: calc(50% - 8px);
+        }
+
+        @include media-breakpoint-down(lg) {
+          order: 2;
+          width: 100%;
+        }
+      }
+
+      &:nth-child(3) {
+        width: calc(50% - 8px);
+        background-color: $pink-04;
+
+        @include media-breakpoint-down(lg) {
+          order: 4;
+          width: 100%;
+        }
+      }
+
+      &:nth-child(4) {
+        width: calc(50% - 8px);
+        background-color: $purple-02;
+        background-image: url($images + '/static/pattern-a.svg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include media-breakpoint-down(xxl) {
+          width: 100%;
+        }
+
+        @include media-breakpoint-down(lg) {
+          order: 3;
+        }
+      }
+    }
+  }
+
+  &_3-cards {
+    #{$self}__wrapper {  
+      & > * {
+        &:nth-child(1) {
+          width: 100%;
+          background-color: $purple-02;
+          background-image: url($images + '/static/pattern-l.svg');
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+  
+          @include media-breakpoint-down(lg) {
+            order: 1;
+          }
+        }
+  
+        &:nth-child(2) {
+          width: calc(50% - 8px);
+          background-color: $pink-04;
+  
+          @include media-breakpoint-down(lg) {
+            order: 2;
+            width: 100%;
+          }
+        }
+  
+        &:nth-child(3) {
+          width: calc(50% - 8px);
+          background-color: $neon-strawberry-02;
+  
+          @include media-breakpoint-down(lg) {
+            order: 3;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  & + & {
+    margin-top: 16px;
+  }
+}

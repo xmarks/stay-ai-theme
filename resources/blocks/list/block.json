@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/list",
+  "title": "List",
+  "category": "theme",
+  "icon": "heart",
+  "acf": {
+    "mode": "edit"
+  },
+  "supports": {
+    "align": false,
+    "jsx": true
+  },
+  "style": "custom-list"
+}

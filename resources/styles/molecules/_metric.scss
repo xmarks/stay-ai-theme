@@ -1,0 +1,83 @@
+.metric {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+
+  @include media-breakpoint-down(xl) {
+    gap: 8px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+  }
+
+  &__value {
+    background-color: transparent;
+
+    &-wrapper {
+      display: flex;
+      align-items: flex-end;
+      background: $primary-gradient-button;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-color: black;
+    }
+  }
+
+  &__number {
+    display: block;
+    @include typo-headline-1;
+
+    @include media-breakpoint-down(xxl) {
+      font-size: 60px;
+    }
+
+    @include media-breakpoint-down(xl) {
+      font-size: 55px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      @include typo-headline-1;
+    }
+  }
+
+  &__symbol {
+    display: block;
+    @include typography;
+    font-size: 40px;
+    line-height: 38px;
+    font-weight: 550;
+    letter-spacing: -0.03em;
+    margin-bottom: 2px;
+
+    @include media-breakpoint-down(xl) {
+      font-size: 38px;
+    }
+  }
+
+  &__description {
+    padding: 10px 0 8px;
+    min-width: 132px;
+    max-width: 132px;
+    color: rgba($black, 0.6);
+
+    @include media-breakpoint-down(xxl) {
+      min-width: 120px;
+    }
+
+    @include media-breakpoint-down(xl) {
+      min-width: 110px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      padding: unset;
+      max-width: unset;
+    }
+
+    @include media-breakpoint-down(md) {
+      max-width: 142px;
+    }
+  }
+}

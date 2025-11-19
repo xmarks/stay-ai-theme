@@ -1,0 +1,46 @@
+.article-page-breadcrumbs {
+  padding: 42px 60px 14px;
+
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+  }
+
+  &__item {
+    a span,
+    span {
+      @include typo-caption-2;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 16px;
+        height: 16px;
+        rotate: -90deg;
+        mask-image: url($icons + '/arrow-down.svg');
+        mask-position: center;
+        mask-size: cover;
+        background-color: rgba($black, 0.6);
+      }
+
+      span {
+        color: $pink-06;
+      }
+    }
+
+    & > span {
+      color: rgba($black, 0.6);
+    }
+  }
+}

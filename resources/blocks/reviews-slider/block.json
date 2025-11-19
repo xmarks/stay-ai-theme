@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/reviews-slider",
+  "title": "Reviews Slider",
+  "category": "theme",
+  "icon": "testimonial",
+  "acf": {
+    "mode": "edit"
+  },
+  "supports": {
+    "align": false,
+    "jsx": true
+  },
+  "style": "reviews-slider"
+}

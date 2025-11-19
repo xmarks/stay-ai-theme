@@ -1,0 +1,14 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/image",
+  "title": "Image",
+  "category": "media",
+  "icon": "format-image",
+  "acf": {
+      "mode": "edit"
+  },
+  "supports": {
+      "align": false,
+      "jsx": true
+  }
+}

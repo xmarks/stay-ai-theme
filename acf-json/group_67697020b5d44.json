@@ -1,0 +1,46 @@
+{
+    "key": "group_67697020b5d44",
+    "title": "Container",
+    "fields": [
+        {
+            "key": "field_676970205bb7f",
+            "label": "Row layout",
+            "name": "row_layout",
+            "aria-label": "",
+            "type": "range",
+            "instructions": "Change particular row layout manually by specifying number of columns to create different widths for your content.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 6,
+            "min": 1,
+            "max": 12,
+            "step": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/container"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1734963308
+}

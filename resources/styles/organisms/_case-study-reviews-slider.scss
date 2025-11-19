@@ -1,0 +1,98 @@
+@import '../atoms/swiper-pagination-bullet';
+@import '../atoms/swiper-navigation-button';
+@import '../molecules/swiper-pagination';
+@import '../molecules/case-study-reviews-slide';
+
+.case-study-reviews-slider {
+  $self: &;
+
+  &__content {
+    position: relative;
+    padding: 0 8.5%;
+
+    @include media-breakpoint-down(lg) {
+      position: static;
+      padding: unset;
+    }
+  }
+
+  &__swiper.swiper {
+    @include media-breakpoint-down(lg) {
+      overflow: visible;
+    }
+  }
+
+  &__navigation {
+    @include media-breakpoint-down(lg) {
+      display: none;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 36px;
+    }
+  }
+
+  &__prev-button,
+  &__next-button {
+    position: absolute;
+    top: 49%;
+
+    @include media-breakpoint-down(lg) {
+      position: static;
+    }
+  }
+
+  &__prev-button {
+    left: 0;
+  }
+
+  &__next-button {
+    right: 0;
+  }
+
+  &__pagination-wrapper {
+    position: relative;
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+
+    .swiper-pagination-bullets {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-pagination-bullet {
+      flex-shrink: 0;
+    }
+
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+      width: 14px;
+      height: 14px;
+      --swiper-pagination-bullet-horizontal-gap: 3px;
+    }
+  }
+
+  &.show-pagination {
+    #{$self}__pagination-wrapper {
+      opacity: 1;
+      visibility: visible;
+      margin-top: 73px;
+
+      @include media-breakpoint-down(xl) {
+        margin-top: 57px;
+      }
+
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+    }
+  }
+
+  &.show-navigation {
+    #{$self}__navigation {
+      @include media-breakpoint-down(lg) {
+        display: flex;
+      }
+    }
+  }
+}

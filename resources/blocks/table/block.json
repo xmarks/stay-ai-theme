@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/table",
+  "title": "Table",
+  "category": "theme",
+  "icon": "editor-table",
+  "acf": {
+    "mode": "edit"
+  },
+  "supports": {
+    "align": false,
+    "jsx": true
+  },
+  "style": "table"
+}

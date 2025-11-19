@@ -1,0 +1,28 @@
+@import '../atoms/swiper-navigation-button';
+@import '../molecules/case-study-card';
+
+.case-study-slider {
+  $self: &;
+
+  &__swiper.swiper {
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    height: auto;
+  }
+
+  &__navigation {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 48px;
+  }
+
+  &.show-navigation {
+    #{$self}__navigation {
+      display: flex;
+    }
+  }
+}

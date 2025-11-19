@@ -1,0 +1,50 @@
+.custom-list-item {
+  display: flex;
+  gap: 16px;
+  $self: &;
+
+  @include media-breakpoint-down(lg) {
+    gap: 12px;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+  }
+
+  &__content {
+    max-width: 546px;
+  }
+
+  &__subtitle {
+    color: $pink-06;
+    display: inline-flex;
+  }
+
+  &__text {
+    display: inline;
+  }
+
+  &_hide-text {
+    @include media-breakpoint-down(lg) {
+      #{$self}__special-character {
+        display: none;
+      }
+
+      #{$self}__text {
+        display: none;
+      }
+    }
+  }
+
+  &_width-xl {
+    #{$self}__content {
+      max-width: calc(546px + 40px);
+
+      @include media-breakpoint-down(lg) {
+        max-width: calc(546px + 36px);
+      }
+    }
+  }
+}

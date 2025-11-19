@@ -1,0 +1,14 @@
+@import './info-badge';
+
+.info-badges {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  @include media-breakpoint-down(lg) {
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+  }
+}

@@ -1,0 +1,115 @@
+@import '../molecules/metric';
+
+.metrics {
+  $self: &;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px 20px;
+
+    @include media-breakpoint-down(xxl) {
+      gap: 28px 12px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      gap: 28px 0;
+      width: 100%;
+    }
+  }
+
+  &__item {
+    &:not(:first-child) {
+      position: relative;
+      padding-left: 20px;
+
+      @include media-breakpoint-down(xl) {
+        padding-left: 12px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        background: linear-gradient(
+          0deg,
+          rgba(158, 158, 158, 0) 0%,
+          rgba(158, 158, 158, 0.25) 52.5%,
+          rgba(158, 158, 158, 0) 100%
+        );
+      }
+    }
+
+    @include media-breakpoint-down(lg) {
+      width: 50%;
+      align-items: center;
+
+      &:nth-child(odd) {
+        padding-left: unset;
+
+        &::before {
+          content: none;
+        }
+
+        &:last-child {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  &_simple-text {
+    #{$self} {
+      &__content {
+        padding-left: 32px;
+        padding-right: 32px;
+
+        @include media-breakpoint-down(lg) {
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+      }
+
+      &__list {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px 20px;
+
+        @include media-breakpoint-down(lg) {
+          gap: 28px 12px;
+        }
+      }
+
+      &__item {
+        position: static;
+        padding-left: unset;
+
+        &::before {
+          content: none;
+        }
+
+        &_w-100 {
+          grid-column: 1 / span 2;
+          justify-self: center;
+        }
+
+        @include media-breakpoint-down(lg) {
+          justify-self: center;
+        }
+      }
+
+      &__description {
+        max-width: 160px;
+      }
+    }
+  }
+}

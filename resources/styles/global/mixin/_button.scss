@@ -1,0 +1,54 @@
+@mixin btn {
+  display: flex;
+  justify-content: center;
+  padding: 16px 32px;
+  min-width: 240px;
+  width: fit-content;
+  border-radius: 68px;
+  transition-property: color, background-color, background-position, border-color;
+  transition-duration: $delaySm;
+  transition-timing-function: ease;
+  @include typo-button;
+}
+
+@mixin btn-primary {
+  @include btn;
+  color: $white;
+  background: $primary-gradient-button;
+  background-size: 170% 100%;
+  background-position: left center;
+
+  @media (hover: hover) {
+    &:hover {
+      background-position: right center;
+    }
+  }
+}
+
+@mixin btn-secondary {
+  @include btn;
+  background-color: $white;
+
+  span {
+    @include gradient-text;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $pink-02;
+    }
+  }
+}
+
+@mixin btn-tertiary {
+  @include btn;
+  color: $pink-06;
+  background-color: $pink-01;
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: $pink-02;
+      color: $pink-05;
+    }
+  }
+}

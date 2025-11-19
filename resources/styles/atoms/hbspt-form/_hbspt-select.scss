@@ -1,0 +1,27 @@
+@mixin hbspt-select {
+  appearance: none;
+  width: 100% !important;
+  padding: 9px 11px;
+  background-color: $white;
+  background-image: url($icons + '/expand-more.svg');
+  background-position-x: calc(100% - 11px);
+  background-position-y: 50%;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  border-radius: 8px;
+  border: 1px solid $charcoal-03;
+  @include typo-body-3;
+  font-weight: 300;
+
+  &:focus {
+    outline: 2px solid $pink-05;
+  }
+}
+
+@mixin hbspt-select-error {
+  border-color: $neon-strawberry-02;
+}
+
+@mixin hbspt-select-placeholder {
+  color: rgba($black, 0.6);
+}

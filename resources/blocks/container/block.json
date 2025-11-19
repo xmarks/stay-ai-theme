@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/container",
+  "title": "Container",
+  "category": "design",
+  "icon": "align-center",
+  "acf": {
+    "mode": "preview"
+  },
+  "supports": {
+    "align": false,
+    "jsx": true
+  },
+  "style": "container-template"
+}

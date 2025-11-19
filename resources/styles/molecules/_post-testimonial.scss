@@ -1,0 +1,44 @@
+.post-testimonial {
+  @include blockquote;
+
+  .review-card {
+    &__text {
+      @include typo-body-1;
+    }
+
+    &__reviewer {
+      margin-top: 28px; 
+      display: flex;
+      align-items: center;
+      column-gap: 12px;
+    }
+
+    &__reviewer-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__photo {
+      border-radius: 50%;
+      overflow: hidden;
+      width: 48px;
+      height: 48px;
+
+      @include media-breakpoint-down(lg) {
+        width: 32px;
+        height: 32px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    &__occupation {
+      margin-top: 4px;
+    }
+  }
+}

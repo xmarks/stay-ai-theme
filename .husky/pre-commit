@@ -1,0 +1,1 @@
+cd wordpress/wp-content/themes/stay-ai-theme/ && npx lint-staged

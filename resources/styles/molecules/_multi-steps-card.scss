@@ -1,0 +1,76 @@
+.multi-steps-card {
+  position: relative;
+  $self: &;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: calc(-135px + 20px);
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: $primary-gradient-icon;
+
+    @include media-breakpoint-down(lg) {
+      left: calc(-68px + 8px);
+      width: 36px;
+      height: 36px;
+    }
+  }
+
+  &__circle {
+    position: absolute;
+    top: -20px;
+    left: -135px;
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include media-breakpoint-down(lg) {
+      left: -68px;
+      top: -8px;
+      width: 52px;
+      height: 52px;
+    }
+  }
+
+  &__icon {
+    z-index: 2;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+
+    @include media-breakpoint-down(lg) {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__number {
+    z-index: 2;
+    color: $white;
+    line-height: 1 !important;
+  }
+
+  &__text {
+    margin-top: 24px;
+    opacity: 0.7;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 16px;
+    }
+  }
+
+  &_active {
+    #{$self}__circle {
+      background-color: $pink-01;
+    }
+  }
+}

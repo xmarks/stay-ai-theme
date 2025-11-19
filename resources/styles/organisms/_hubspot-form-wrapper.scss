@@ -1,0 +1,182 @@
+@import '../atoms/hbspt-form';
+
+.hubspot-form-wrapper {
+  .hbspt-form {
+    fieldset:first-child {
+      .hs-richtext {
+        margin-top: 0;
+      }
+    }
+
+    fieldset + fieldset {
+      .hs-form-field {
+        margin-top: 16px;
+      }
+
+      &:has(.hs-richtext) {
+        .hs-form-field {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .hs-richtext {
+      width: 100%;
+
+      &:has(+ .hs-form-field, + .hs-dependent-field) {
+        @include typo-subtitle-2;
+        color: #000;
+        margin-top: 48px;
+
+        @include media-breakpoint-down(lg) {
+          margin-top: 32px;
+        }
+      }
+    }
+
+    .form-columns-1,
+    .form-columns-2 {
+      max-width: unset;
+
+      .hs-form-field {
+        .input {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .form-columns-2 {
+      @include hbspt-form-columns-2;
+
+      .hs-form-field {
+        width: calc(50% - 8px);
+      }
+    }
+
+    .hs-dependent-field {
+      .hs-form-field + .hs-form-field {
+        margin-top: 12px;
+      }
+
+      .hs-fieldtype-checkbox + .hs-form-field {
+        margin-top: 36px;
+
+        @include media-breakpoint-down(lg) {
+          margin-top: 28px;
+        }
+      }
+    }
+
+    .hs-form-field {
+      & > label,
+      & > legend {
+        margin-bottom: 4px;
+        display: none;
+        @include typo-caption-2;
+        font-weight: 300;
+      }
+    }
+
+    .hs-fieldtype-select {
+      margin-top: 12px;
+    }
+
+    .hs-fieldtype-checkbox {
+      margin-top: 36px;
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 28px;
+      }
+
+      & > label {
+        display: none;
+      }
+
+      .input {
+        margin-top: 24px;
+      }
+
+      .inputs-list {
+        @include hbspt-checkboxes-list;
+      }
+
+      .hs-form-checkbox {
+        @include hbspt-checkbox;
+      }
+
+      .hs-error-msg {
+        margin-top: 24px;
+      }
+    }
+
+    .input {
+      input:not([type='checkbox']) {
+        @include hbspt-input;
+
+        &.invalid,
+        &.error {
+          @include hbspt-input-error;
+        }
+      }
+
+      select {
+        @include hbspt-select;
+
+        &.is-placeholder {
+          @include hbspt-select-placeholder;
+        }
+
+        &.invalid,
+        &.error {
+          @include hbspt-select-error;
+        }
+      }
+    }
+
+    .hs-error-msg {
+      margin-top: 4px;
+      @include hbspt-error-msg;
+    }
+
+    .legal-consent-container {
+      p {
+        margin-top: 32px;
+        @include hbspt-legal-consent-text;
+
+        @include media-breakpoint-down(lg) {
+          margin-top: 28px;
+        }
+      }
+    }
+
+    .hs-submit {
+      margin-top: 48px;
+      @include hbspt-submit;
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 24px;
+      }
+    }
+
+    .submitted-message {
+      @include hbspt-submitted-message;
+    }
+  }
+
+  &_align-center {
+    .hbspt-form {
+      .hs-submit {
+        width: fit-content;
+        margin: 48px auto 0 auto;
+
+        @include media-breakpoint-down(lg) {
+          margin: 32px auto 0 auto;
+        }
+
+        @include media-breakpoint-down(md) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

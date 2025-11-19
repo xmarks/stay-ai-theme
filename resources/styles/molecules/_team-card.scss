@@ -1,0 +1,52 @@
+.team-card {
+  display: flex;
+  flex-direction: column;
+  all: unset;
+  cursor: pointer;
+
+  &__image {
+    border-radius: 20px;
+    overflow: hidden;
+    // display: flex;
+    @include aspect-ratio-pseudo(377, 360);
+
+    @include media-breakpoint-down(sm) {
+      @include aspect-ratio-pseudo(343, 300);
+    }
+  }
+
+  &__content {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 32px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 24px;
+    }
+  }
+
+  &__text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    @include media-breakpoint-down(lg) {
+      gap: 6px;
+    }
+  }
+
+  &__position {
+    opacity: 0.6;
+  }
+
+  &__social-media-icon {
+    flex-shrink: 0;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

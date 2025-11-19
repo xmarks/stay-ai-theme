@@ -1,0 +1,30 @@
+.chips-item {
+  --chip-color: #{$black};
+  --chip-bgColor: #{$charcoal-01};
+  padding: 9px 16px;
+  border-radius: 20px;
+  color: var(--chip-color);
+  background-color: var(--chip-bgColor);
+  text-align: center;
+  transition:
+    color $delaySm ease,
+    background-color $delaySm ease,
+    border-color $delaySm ease;
+  cursor: pointer;
+
+  @media (hover: hover) {
+    &:hover {
+      --chip-bgColor: #{$pink-02};
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    white-space: nowrap;
+  }
+
+  &_active {
+    --chip-color: #{$white};
+    --chip-bgColor: #{$pink-06};
+    pointer-events: none;
+  }
+}

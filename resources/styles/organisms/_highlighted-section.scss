@@ -1,0 +1,19 @@
+.highlighted-section {
+  padding: 32px 44px;
+  border-radius: 20px;
+  background-color: $pink-01;
+
+  @include media-breakpoint-down(lg) {
+    padding: 32px 16px;
+  }
+
+  ul.wp-block-list,
+  ol.wp-block-list {
+    row-gap: unset;
+    margin: 32px 0 0;
+
+    @include media-breakpoint-down(lg) {
+      margin: 27px 0 0;
+    }
+  }
+}

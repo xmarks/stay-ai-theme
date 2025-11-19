@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/content-scrolling-steps",
+  "title": "Content & Scrolling Steps",
+  "category": "theme",
+  "icon": "editor-ul",
+  "acf": {
+    "mode": "preview"
+  },
+  "supports": {
+    "align": false,
+    "jsx": true
+  },
+  "style": "content-scrolling-steps"
+}

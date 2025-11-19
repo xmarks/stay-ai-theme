@@ -1,0 +1,14 @@
+@mixin hbspt-submit {
+  button[type='submit'],
+  input[type='submit'] {
+    all: unset;
+    @include btn-primary;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+}

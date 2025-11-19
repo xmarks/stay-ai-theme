@@ -1,0 +1,42 @@
+@mixin blockquote {
+  padding: 24px 32px;
+  background-color: $pink-01;
+  border-radius: 20px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 24px 16px;
+    row-gap: 25px;
+  }
+
+  p {
+    color: $black;
+    margin-bottom: unset;
+  }
+
+  p + p {
+    margin-top: 32px;
+    margin-bottom: unset;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 24px;
+      margin-bottom: unset;
+    }
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    margin-bottom: 24px;
+    width: 32px;
+    height: 32px;
+    mask-image: url($icons + '/blockquote.svg');
+    mask-position: center;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    background-color: $pink-03;
+  }
+}
+
+blockquote {
+  @include blockquote;
+}

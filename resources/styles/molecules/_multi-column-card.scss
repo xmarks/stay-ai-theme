@@ -1,0 +1,92 @@
+.multi-column-card {
+  $self: &;
+  padding-right: 40px;
+
+  &__icon,
+  &__image {
+    margin-bottom: 40px;
+  }
+
+  &__icon {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    overflow: hidden;
+    background: $primary-gradient-icon;
+
+    img,
+    svg {
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+    }
+
+    @include media-breakpoint-down(lg) {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      margin-bottom: 32px;
+
+      img,
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
+
+  &__image {
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 36px;
+    }
+  }
+
+  &__content {
+    .acf-innerblocks-container {
+      .wp-block-heading + * {
+        margin-top: 24px;
+
+        @include media-breakpoint-down(lg) {
+          margin-top: 16px;
+        }
+      }
+
+      & > * + * {
+        margin-top: 30px;
+
+        @include media-breakpoint-down(lg) {
+          margin-top: 16px;
+        }
+      }
+
+      p {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &_image {
+    background-color: $white;
+    padding: 0;
+
+    @include media-breakpoint-up(lg) {
+      border-radius: 20px;
+      padding: 12px;
+    }
+
+    #{$self} {
+      &__image {
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      &__content {
+        padding-left: 8px;
+        padding-right: 8px;
+      }
+    }
+  }
+}

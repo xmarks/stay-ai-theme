@@ -1,0 +1,31 @@
+.article-page-cta-text {
+  $self: &;
+  padding-left: 48px;
+  border-left: 4px solid $pink-06;
+
+  @include media-breakpoint-down(lg) {
+    padding-left: 29px;
+  }
+
+  &__title {
+    @include typo-headline-4;
+  }
+
+  p#{$self}__text {
+    margin-top: 24px;
+    margin-bottom: unset;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 16px;
+      margin-bottom: unset;
+    }
+  }
+
+  &__btn {
+    margin-top: 42px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 32px;
+    }
+  }
+}

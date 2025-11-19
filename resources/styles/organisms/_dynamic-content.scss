@@ -1,0 +1,148 @@
+.dynamic-content {
+  $self: &;
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @include media-breakpoint-down(lg) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__row {
+    @include media-breakpoint-up(lg) {
+      align-items: center;
+    }
+
+    @include media-breakpoint-down(lg) {
+      gap: 36px;
+    }
+
+    &_xl-gap {
+      @include media-breakpoint-down(lg) {
+        gap: 60px;
+      }
+    }
+  }
+
+  &__image {
+    border-radius: 24px;
+    overflow: hidden;
+
+    @include media-breakpoint-down(lg) {
+      border-radius: 20px;
+    }
+  }
+
+  &__content {
+    .acf-innerblocks-container {
+      .tag {
+        margin-bottom: 32px;
+
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 29px;
+        }
+      }
+
+      .wp-block-heading + * {
+        margin-top: 24px;
+
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 16px;
+        }
+      }
+
+      .has-headline-1-font-size + * {
+        margin-top: 40px;
+
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 24px;
+        }
+      }
+
+      p + p {
+        margin-top: 30px;
+
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 22px;
+        }
+      }
+
+      * + .benefits-grid,
+      * + .wp-block-acf-benefits-grid {
+        margin-top: 60px;
+
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 36px;
+        }
+      }
+
+      * + .btn,
+      * + .wp-block-acf-button {
+        margin-top: 48px;
+
+        @include media-breakpoint-down(lg) {
+          margin-bottom: 36px;
+        }
+      }
+    }
+  }
+
+  &_full-width {
+    @include media-breakpoint-up(lg) {
+      &:not(.dynamic-content_reversed) {
+        #{$self}__content {
+          margin-left: -60px;
+          width: calc(100% + 60px);
+        }
+      }
+
+      &.dynamic-content_reversed {
+        #{$self}__content {
+          margin-right: -60px;
+          width: calc(100% + 60px);
+        }
+      }
+    }
+  }
+
+  &_full-width-with-big-image {
+    @include media-breakpoint-up(xxl) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    @include media-breakpoint-up(xxxl) {
+      padding-left: unset;
+      padding-right: unset;
+    }
+    
+    #{$self}__row {
+      &_xl-gap {
+        @include media-breakpoint-down(lg) {
+          gap: 8px;
+        }
+      }
+    }
+  }
+
+  &_centered-text-on-mobile {
+    #{$self}__content {
+      .acf-innerblocks-container {
+        .wp-block-heading,
+        p,
+        li {
+          @include media-breakpoint-down(lg) {
+            text-align: center;
+          }
+        }
+
+        .tag,
+        a {
+          @include media-breakpoint-down(lg) {
+            margin-inline: auto;
+          }
+        }
+      }
+    }
+  }
+}

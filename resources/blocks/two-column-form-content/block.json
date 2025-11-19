@@ -1,0 +1,25 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/two-column-form-content",
+  "title": "Two-Column Form & Content",
+  "category": "theme",
+  "allowedBlocks": [
+    "core/heading",
+    "core/paragraph",
+    "core/list",
+    "acf/tag",
+    "acf/button",
+    "acf/benefits-grid",
+    "acf/spacer",
+    "acf/list"
+  ],
+  "icon": "align-left",
+  "acf": {
+    "mode": "edit"
+  },
+  "supports": {
+    "align": false,
+    "jsx": true
+  },
+  "style": "two-column-form-content"
+}

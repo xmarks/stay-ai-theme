@@ -1,0 +1,202 @@
+.navigation-mobile {
+  overflow: auto;
+
+  .navigation {
+    flex-direction: column;
+
+    .menu-item,
+    .sub-menu,
+    a {
+      width: 100%;
+    }
+
+    & > .menu-item {
+      padding: unset;
+      border-bottom: 1px solid $charcoal-02;
+      transition: border-color $delaySm ease;
+
+      & > a,
+      & > div:first-child {
+        display: block;
+        padding: 16px 0 15px 8px;
+
+        @include media-breakpoint-down(lg) {
+          @include typo-subtitle-1;
+        }
+      }
+
+      &.current-menu-item {
+        color: $pink-06;
+      }
+    }
+
+    .menu-item-has-children {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: unset;
+
+      &::after {
+        content: none;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 53px;
+        background-color: transparent;
+      }
+
+      & > a,
+      & > div:first-child {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4px;
+        width: 100%;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 16px;
+          height: 16px;
+          mask-image: url($icons + '/arrow-small.svg');
+          mask-position: center;
+          mask-size: cover;
+          background-color: currentColor;
+          transition: rotate $delaySm ease;
+        }
+      }
+    }
+
+    .menu-item {
+      &__container {
+        position: static;
+        translate: 0;
+        padding: 0;
+        display: grid;
+        grid-template-rows: 0fr;
+        width: 100%;
+        background-color: transparent;
+        border: unset;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transition:
+          padding $delaySm ease,
+          grid-template-rows $delaySm ease;
+
+        &::before {
+          content: none;
+        }
+
+        .menu-item__container-wrapper {
+          overflow: hidden;
+        }
+
+        & > .menu-item__container-wrapper > .menu-item__items > .sub-menu {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+
+          & > .menu-item > .menu-item__link {
+            padding: 8px;
+
+            .icon {
+              background-color: $black;
+            }
+
+            .text {
+              p:first-child {
+                color: $black;
+              }
+            }
+
+            &::after {
+              background-color: $black;
+            }
+          }
+
+          & > .current-menu-item > .menu-item__link .icon {
+            background-color: $pink-06;
+          }
+
+          & > .menu-item.current-menu-ancestor > .menu-item__link,
+          & > .menu-item.current-menu-item > .menu-item__link {
+            .text {
+              p:first-child {
+                color: $pink-06;
+              }
+            }
+
+            &::after {
+              background-color: $pink-06;
+            }
+          }
+
+          & > .menu-item > .menu-item__container {
+            &.active {
+              grid-template-rows: 1fr;
+            }
+          }
+
+          .sub-menu {
+            margin-top: unset;
+            padding: 0 12px;
+            gap: 4px;
+            overflow: hidden;
+          }
+
+          & > .menu-item-has-children > .menu-item__link {
+            padding: 13.5px 0 13.5px 8px;
+            pointer-events: all;
+          }
+        }
+      }
+
+      &__posts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        height: fit-content;
+
+        @include media-breakpoint-down(lg) {
+          margin-top: 12px;
+          padding: 8px 0 12px 8px;
+          grid-row-gap: 20px;
+        }
+
+        .cta-card {
+          @include media-breakpoint-down(lg) {
+            margin-left: -8px;
+          }
+        }
+      }
+
+      & > .menu-item__container .menu-item__container .menu-item__posts {
+        @include media-breakpoint-down(lg) {
+          padding-left: 20px;
+        }
+      }
+
+      &.active {
+        border-color: transparent;
+
+        & > div {
+          &::after {
+            rotate: -180deg;
+          }
+        }
+
+        & > .menu-item__container {
+          padding: 8px 0 11px;
+          grid-template-rows: 1fr;
+        }
+      }
+    }
+  }
+}

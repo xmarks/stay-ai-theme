@@ -1,0 +1,74 @@
+// Primary
+
+$pink-01: #fef0fa;
+$pink-02: #feddf3;
+$pink-03: #fb9ddb;
+$pink-04: #f952c0;
+$pink-05: #f609a5;
+$pink-06: #cf088b;
+$pink-08: #7b0452;
+
+// Additional
+
+$purple-01: #d086ff;
+$purple-02: #c365ff;
+$purple-03: #f155ff;
+$neon-strawberry-01: #f692aa;
+$neon-strawberry-02: #f0406a;
+$orange-01: #febcb3;
+$orange-02: #fc634e;
+$blue-link: #2549FF;
+
+// Grey
+
+$charcoal-01: #f7f7f7;
+$charcoal-02: #f0f0f0;
+$charcoal-03: #bfbfbf;
+$charcoal-04: #999999;
+$charcoal-05: #666666;
+$charcoal-06: #3f3f3f;
+
+// Standard
+
+$white: #ffffff;
+$black: #020202;
+
+// Gradient
+
+$primary-gradient-button: linear-gradient(
+  93deg,
+  #f0406a 0%,
+  #f609a5 47%,
+  #a825ff 100%
+);
+
+$primary-gradient-text: linear-gradient(
+  92.86deg,
+  #ff2d5f -5.04%,
+  #ff33b9 51.72%,
+  #ab44fd 106.36%
+);
+
+$primary-gradient-icon: linear-gradient(
+  155.89deg,
+  #f609a5 9.18%,
+  #c41bdf 101.82%
+);
+
+$peach-gradient: linear-gradient(
+  180deg,
+  #ffffff 0%,
+  rgba(254, 221, 243, 0.7) 100%
+);
+
+$soft-pink-gradient: linear-gradient(
+  180deg,
+  #ffffff 0%,
+  rgba(255, 211, 255, 0.8) 100%
+);
+
+$white-gradient: linear-gradient(
+  180deg,
+  rgba(255, 255, 255, 0.4) 0%,
+  rgba(255, 255, 255, 0.1) 100%
+);

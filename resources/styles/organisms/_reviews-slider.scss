@@ -1,0 +1,19 @@
+@import '../atoms/swiper-pagination-bullet';
+@import '../molecules/review-card';
+@import '../molecules/swiper-pagination';
+
+.reviews-slider {
+  &__swiper.swiper {
+    overflow: visible;
+    cursor: grab;
+
+    .swiper-slide {
+      height: auto;
+    }
+  }
+
+  &__pagination-wrapper {
+    position: relative;
+    margin-top: 56px;
+  }
+}

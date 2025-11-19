@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/case-study-reviews-slider",
+  "title": "Case Study Reviews Slider",
+  "category": "theme",
+  "icon": "slides",
+  "acf": {
+    "mode": "edit"
+  },
+  "supports": {
+    "align": false,
+    "jsx": true
+  },
+  "style": "case-study-reviews-slider"
+}

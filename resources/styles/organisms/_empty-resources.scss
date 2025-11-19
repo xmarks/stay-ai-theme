@@ -1,0 +1,23 @@
+.empty-resources {
+  padding: 48px 0;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    @include media-breakpoint-down(lg) {
+      gap: 12px;
+    }
+  }
+
+  &__title {
+  }
+
+  &__subtitle {
+    opacity: 0.6;
+  }
+}

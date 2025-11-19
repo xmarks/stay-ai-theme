@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/bento-cards",
+  "title": "Bento Cards",
+  "category": "theme",
+  "icon": "schedule",
+  "acf": {
+    "mode": "edit"
+  },
+  "supports": {
+    "align": false,
+    "jsx": true
+  },
+  "style": "bento-cards"
+}

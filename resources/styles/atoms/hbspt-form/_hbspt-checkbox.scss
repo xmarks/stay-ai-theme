@@ -1,0 +1,60 @@
+@mixin hbspt-checkbox {
+  label {
+    @include typo-body-3;
+    font-weight: 300;
+    color: $black;
+    padding-left: 32px;
+    position: relative;
+
+    &::after {
+      content: none;
+      position: absolute;
+      top: 50%;
+      left: 4px;
+      width: 15px;
+      height: 15px;
+      mask-image: url($icons + '/checkbox-check.svg');
+      mask-size: 15px 15px;
+      mask-position: center;
+      mask-repeat: no-repeat;
+      background-color: $white;
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: 2px solid $charcoal-03;
+      border-radius: 4px;
+      transform: translateY(-50%);
+      transition-property: background-color, border-color;
+    }
+
+    &:has(input[type='checkbox']:focus) {
+      &::before {
+        border-color: $pink-05;
+      }
+    }
+
+    &:has(input[type='checkbox']:checked) {
+      &::after {
+        content: '';
+      }
+
+      &::before {
+        background-color: $pink-05;
+        border-color: $pink-05;
+      }
+    }
+  }
+
+  input[type='checkbox'] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}

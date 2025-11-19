@@ -1,0 +1,120 @@
+{
+  "__generated__": "⚠️ This file is generated. Do not edit.",
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "background": {
+      "backgroundImage": true
+    },
+    "color": {
+      "custom": false,
+      "customDuotone": false,
+      "customGradient": false,
+      "defaultDuotone": false,
+      "defaultGradients": false,
+      "defaultPalette": false,
+      "duotone": [],
+      "palette": [
+        {
+          "slug": "standard_black",
+          "color": "#020202",
+          "name": "Standard Black"
+        },
+        {
+          "slug": "black_opacity_60",
+          "color": "rgba(2, 2, 2, 0.6)",
+          "name": "Black Opacity 60"
+        },
+        {
+          "slug": "black_opacity_70",
+          "color": "rgba(2, 2, 2, 0.7)",
+          "name": "Black Opacity 70"
+        },
+        {
+          "slug": "White",
+          "color": "#FFFFFF",
+          "name": "White"
+        },
+        {
+          "slug": "Pink_01",
+          "color": "#FEF0FA",
+          "name": "Pink 01"
+        },
+        {
+          "slug": "Pink_06",
+          "color": "#CF088B",
+          "name": "Pink 06"
+        }
+      ]
+    },
+    "custom": {
+      "spacing": {},
+      "typography": {
+        "font-size": {},
+        "line-height": {}
+      }
+    },
+    "spacing": {
+      "padding": false,
+      "units": [
+        "px",
+        "%",
+        "em",
+        "rem",
+        "vw",
+        "vh"
+      ]
+    },
+    "typography": {
+      "customFontSize": false,
+      "letterSpacing": false,
+      "fontSizes": [
+        {
+          "slug": "headline_1",
+          "size": "70px",
+          "name": "Headline 1"
+        },
+        {
+          "slug": "headline_2",
+          "size": "56px",
+          "name": "Headline 2"
+        },
+        {
+          "slug": "headline_3",
+          "size": "42px",
+          "name": "Headline 3"
+        },
+        {
+          "slug": "headline_4",
+          "size": "32px",
+          "name": "Headline 4"
+        },
+        {
+          "slug": "headline_5",
+          "size": "24px",
+          "name": "Headline 5"
+        },
+        {
+          "slug": "headline_6",
+          "size": "1.25rem",
+          "name": "Headline 6"
+        },
+        {
+          "slug": "body_1",
+          "size": "22px",
+          "name": "Body 1"
+        },
+        {
+          "slug": "body_2",
+          "size": "20px",
+          "name": "Body 2"
+        },
+        {
+          "slug": "caption_2",
+          "size": "14px",
+          "name": "Caption"
+        }
+      ]
+    }
+  }
+}

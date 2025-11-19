@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/case-study-archive",
+  "title": "Case Studies",
+  "description": "This block is used only on the case study page and displays a list of case studies. No configuration is needed.",
+  "category": "archive-blocks",
+  "icon": "admin-post",
+  "acf": {
+    "mode": "preview",
+    "postTypes": ["page"]
+  },
+  "supports": {
+    "align": false,
+    "jsx": false
+  }
+}

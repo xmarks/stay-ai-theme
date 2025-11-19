@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/pricing-cards",
+  "title": "Pricing Cards",
+  "category": "theme",
+  "icon": "money-alt",
+  "acf": {
+    "mode": "edit"
+  },
+  "supports": {
+    "align": false,
+    "jsx": true
+  },
+  "style": "pricing-cards"
+}

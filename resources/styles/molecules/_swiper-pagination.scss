@@ -1,0 +1,6 @@
+.swiper-pagination {
+  &.swiper-pagination-bullets.swiper-pagination-horizontal.swiper-pagination-bullets-dynamic {
+    top: unset;
+    bottom: 0;
+  }
+}

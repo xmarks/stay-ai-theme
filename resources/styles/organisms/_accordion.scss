@@ -1,0 +1,8 @@
+@import '../molecules/accordion-item';
+
+.accordion {
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+}

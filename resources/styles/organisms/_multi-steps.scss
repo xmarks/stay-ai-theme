@@ -1,0 +1,76 @@
+@import '../molecules/multi-steps-card';
+
+.multi-steps {
+  &__sticky-content {
+    position: sticky;
+    top: 90px;
+    z-index: 1;
+
+    @include media-breakpoint-down(lg) {
+      position: static;
+    }
+
+    .acf-innerblocks-container {
+      .tag + * {
+        margin-top: 32px;
+
+        @include media-breakpoint-down(lg) {
+          margin-top: 24px;
+        }
+      }
+
+      .wp-block-heading + * {
+        margin-top: 40px;
+
+        @include media-breakpoint-down(lg) {
+          margin-top: 24px;
+        }
+      }
+
+      p + p {
+        margin-top: 24px;
+
+        @include media-breakpoint-down(lg) {
+          margin-top: 16px;
+        }
+      }
+
+      * + a.btn {
+        margin-top: 48px;
+
+        @include media-breakpoint-down(lg) {
+          margin-top: 36px;
+        }
+      }
+    }
+  }
+
+  &__cards {
+    margin-top: 40px;
+    padding-left: 135px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 180px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 72px;
+      padding-left: 60px;
+      gap: 100px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: calc(104px / 2);
+      height: calc(100% - var(--last-card-height));
+      border-left: 1px dotted $pink-03;
+
+      @include media-breakpoint-down(lg) {
+        left: calc(36px / 2);
+      }
+    }
+  }
+}

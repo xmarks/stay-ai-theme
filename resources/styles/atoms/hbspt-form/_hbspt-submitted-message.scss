@@ -1,0 +1,45 @@
+@mixin hbspt-submitted-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 108px 58px;
+  border-radius: 20px;
+  background-color: $pink-05;
+  background-image: url($images + '/static/hbspt-success-message-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &::before {
+    content: '';
+    mask-image: url($icons + '/union.svg');
+    mask-size: 32px 32px;
+    mask-repeat: no-repeat;
+    background-color: $white;
+    position: static;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 16px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 124px 24px;
+  }
+
+  h3,
+  p {
+    text-align: center;
+    color: $white;
+  }
+
+  h3 {
+    @include typo-headline-3;
+  }
+
+  p {
+    @include typo-body-2;
+    max-width: 342px;
+  }
+}

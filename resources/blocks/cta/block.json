@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/cta",
+  "title": "CTA",
+  "category": "theme",
+  "icon": "block-default",
+  "acf": {
+    "mode": "edit",
+    "postTypes": [
+      "post"
+    ]
+  },
+  "supports": {
+    "align": false,
+    "jsx": true
+  }
+}

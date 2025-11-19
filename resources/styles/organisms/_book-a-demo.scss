@@ -1,0 +1,53 @@
+@import './hubspot-form-wrapper';
+
+.book-a-demo {
+  &__content {
+    // TODO: create a mixin for acf-innerblocks-container
+    .acf-innerblocks-container {
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 48px;
+        text-align: center !important;
+      }
+
+      .container,
+      .container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .tag + * {
+        margin-top: 32px;
+
+        @include media-breakpoint-down(lg) {
+          margin-top: 24px;
+        }
+      }
+
+      .wp-block-heading + * {
+        margin-top: 40px;
+
+        @include media-breakpoint-down(lg) {
+          margin-top: 24px;
+        }
+      }
+
+      p + p {
+        margin-top: 36px;
+
+        @include media-breakpoint-down(lg) {
+          margin-top: 20px;
+        }
+      }
+
+      * + a.btn {
+        margin-top: 60px;
+
+        @include media-breakpoint-down(lg) {
+          margin-top: 36px;
+        }
+      }
+    }
+  }
+  &__form {
+  }
+}

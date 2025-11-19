@@ -1,0 +1,150 @@
+.hero-with-img {
+  padding: 100px 0;
+  position: relative;
+  overflow: clip;
+  $self: &;
+
+  @include media-breakpoint-down(lg) {
+    padding: 80px 0 24px 0;
+  }
+
+  &__row {
+    align-items: center;
+  }
+
+  &__content {
+    .acf-innerblocks-container {
+      margin: 0;
+      padding-right: 24px;
+
+      .tag + * {
+        margin-top: 32px;
+
+        @include media-breakpoint-down(lg) {
+          margin-top: 24px;
+        }
+      }
+
+      .wp-block-heading + *,
+      p + .wp-block-heading {
+        margin-top: 40px;
+
+        @include media-breakpoint-down(lg) {
+          margin-top: 24px;
+        }
+      }
+
+      p + p {
+        margin-top: 36px;
+
+        @include media-breakpoint-down(lg) {
+          margin-top: 20px;
+        }
+      }
+
+      * + a.btn {
+        margin-top: 60px;
+
+        @include media-breakpoint-down(lg) {
+          margin-top: 36px;
+        }
+      }
+
+      * + .info-badges {
+        margin-top: 60px;
+
+        @include media-breakpoint-down(lg) {
+          margin-top: 32px;
+        }
+      }
+
+      @include media-breakpoint-down(lg) {
+        margin: 0;
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        * {
+          text-align: left;
+        }
+
+        .alignleft {
+          margin-right: unset;
+        }
+
+        .alignright {
+          margin-left: unset;
+        }
+      }
+    }
+  }
+
+  &__img {
+    display: flex;
+    border-radius: 24px;
+    overflow: hidden;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 32px;
+      border-radius: 20px;
+    }
+  }
+
+  &_pin-img-bottom {
+    padding: 130px 0 0 0;
+
+    @include media-breakpoint-down(lg) {
+      padding: 80px 0 0 0;
+
+      .acf-innerblocks-container {
+        align-items: center;
+
+        * {
+          text-align: center;
+        }
+      }
+    }
+
+    #{$self}__row {
+      align-items: initial;
+    }
+
+    #{$self}__content {
+      margin: 50px 0;
+
+      @include media-breakpoint-down(lg) {
+        margin: 0;
+      }
+    }
+
+    #{$self}__img {
+      border-top-left-radius: 24px;
+      border-top-right-radius: 24px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+
+      @include media-breakpoint-down(lg) {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-top: 48px;
+      }
+    }
+  }
+
+  &_reversed {
+    #{$self}__content {
+      .acf-innerblocks-container {
+        padding-right: 0;
+        padding-left: 24px;
+
+        @include media-breakpoint-down(lg) {
+          padding-right: 0;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}

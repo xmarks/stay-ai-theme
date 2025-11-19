@@ -1,0 +1,18 @@
+@mixin font-face($font-family, $url, $weight) {
+  @font-face {
+    font-family: '#{$font-family}';
+    src: url($fonts + '/#{$url}.woff2') format('woff2'),
+    url($fonts + '/#{$url}.woff2') format('woff2');
+    font-weight: #{$weight};
+    font-display: swap;
+    font-style: normal;
+  }
+}
+
+@include font-face('TWKLausanne', 'TWKLausanne-350', 350);
+@include font-face('TWKLausanne', 'TWKLausanne-400', 400);
+@include font-face('TWKLausanne', 'TWKLausanne-500', 500);
+@include font-face('TWKLausanne', 'TWKLausanne-550', 550);
+@include font-face('TWKLausanne', 'TWKLausanne-600', 600);
+
+$font: 'TWKLausanne', sans-serif;

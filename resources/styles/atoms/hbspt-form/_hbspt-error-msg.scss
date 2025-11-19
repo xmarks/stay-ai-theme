@@ -1,0 +1,5 @@
+@mixin hbspt-error-msg {
+  display: block;
+  @include typo-caption-2;
+  color: $neon-strawberry-02;
+}

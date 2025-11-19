@@ -1,0 +1,10 @@
+@mixin hbspt-checkboxes-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 32px;
+
+  @include media-breakpoint-down(lg) {
+    gap: 24px;
+  }
+}

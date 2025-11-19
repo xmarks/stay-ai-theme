@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/counters",
+  "title": "Counters",
+  "category": "theme",
+  "icon": "editor-ul",
+  "acf": {
+    "mode": "preview"
+  },
+  "supports": {
+    "align": false,
+    "jsx": true
+  },
+  "style": "counters"
+}

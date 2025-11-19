@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/multi-column-cards",
+  "title": "Multi-Column Cards",
+  "category": "theme",
+  "allowedBlocks": ["acf/multi-column-card"],
+  "icon": "table-row-before",
+  "acf": {
+    "mode": "preview"
+  },
+  "supports": {
+    "align": false,
+    "jsx": true
+  },
+  "template": [
+    ["acf/multi-column-card", {}, []],
+    ["acf/multi-column-card", {}, []]
+  ],
+  "style": "multi-column-cards"
+}

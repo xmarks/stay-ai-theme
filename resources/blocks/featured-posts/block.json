@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/featured-posts",
+  "title": "Featured Posts",
+  "category": "theme",
+  "icon": "admin-page",
+  "acf": {
+    "mode": "edit"
+  },
+  "supports": {
+    "align": false,
+    "jsx": true
+  },
+  "style": "featured-posts"
+}

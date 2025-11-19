@@ -1,0 +1,45 @@
+.editor-styles-wrapper {
+  visibility: visible;
+}
+
+.is-root-container {
+  @import './global';
+  @import './index';
+
+  @import './atoms/tag';
+
+  /* Organisms */
+  @import './organisms/accordion';
+  @import './organisms/benefits-grid';
+  @import './organisms/bento-cards';
+  @import './organisms/case-study-slider';
+  @import './organisms/container-template';
+  @import './organisms/dynamic-content';
+  @import './organisms/feature-cards';
+  @import './organisms/footer';
+  @import './organisms/logos-carousel';
+  @import './organisms/metrics';
+  @import './organisms/multi-column-cards';
+  @import './organisms/reviews-slider';
+  @import './organisms/section-template';
+  @import './organisms/spacer';
+  @import './organisms/pricing-cards';
+  @import './organisms/simple-text';
+  @import './organisms/team';
+  @import './organisms/photo-grid';
+  @import './organisms/hero-with-img';
+  @import './organisms/experts-team';
+  @import './organisms/book-a-demo';
+
+  a.btn {
+    pointer-events: none;
+  }
+}
+
+.block-editor {
+  .components-panel {
+    .acf-block-panel {
+      display: none;
+    }
+  }
+}

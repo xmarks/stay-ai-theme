@@ -1,0 +1,107 @@
+.webinar-summary {
+  &__container {
+    padding: 48px;
+    display: grid;
+    grid-template-columns: 0.45fr 0.55fr;
+    gap: 10.4%;
+    background-color: $charcoal-01;
+    border-radius: 24px;
+
+    @include media-breakpoint-down(lg) {
+      display: flex;
+      padding: 24px 16px 16px;
+      gap: 32px;
+      flex-direction: column;
+      border-radius: 20px;
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__title {
+    color: $pink-06;
+  }
+
+  &__description {
+  }
+
+  &__info {
+    border-radius: 20px;
+    background-color: $white;
+    padding: 32px;
+
+    @include media-breakpoint-up(lg) {
+      max-width: 589px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      border-radius: 16px;
+      padding: 16px;
+    }
+  }
+
+  &__list {
+    &-title {
+    }
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include media-breakpoint-down(lg) {
+      gap: 15px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      @include media-breakpoint-down(lg) {
+        gap: 12px;
+      }
+
+      li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 14px;
+
+        @include media-breakpoint-down(lg) {
+          gap: 10px;
+        }
+
+        .list-icon {
+          flex-shrink: 0;
+          width: 20px;
+          height: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          & > * {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            object-position: center;
+          }
+
+          @include media-breakpoint-down(lg) {
+            width: 21px;
+            height: 18px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import '@node_modules/bootstrap/scss/functions';
+@import '@node_modules/bootstrap/scss/variables';
+@import '@node_modules/bootstrap/scss/variables-dark';
+@import '@node_modules/bootstrap/scss/maps';
+@import '@node_modules/bootstrap/scss/mixins';
+@import '@node_modules/bootstrap/scss/utilities';
+
+$grid-gutter-widths: (
+  xs: 10px,
+  lg: 20px,
+);
+
+$container-paddings-x: (
+  xs: 32px,
+  lg: 20px,
+);
+
+// * second argument should be always the smallest one
+$grid-gutter-width: map-get($grid-gutter-widths, xs);
+
+// * second argument should be always the smallest one
+$container-padding-x: map-get($container-paddings-x, xs);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+  xxxl: 1720px
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1160px,
+  xxl: 1460px
+);

@@ -1,0 +1,21 @@
+@import '../molecules/tools-card';
+
+.tools-cards {
+  position: relative;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 32px;
+
+    @include media-breakpoint-down(xxl) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: repeat(1, 1fr);
+      row-gap: 12px;
+    }
+  }
+}

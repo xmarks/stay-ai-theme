@@ -1,0 +1,423 @@
+@import '../atoms/blockquote';
+@import '../molecules/post-testimonial';
+@import '../atoms/mejs-time';
+@import '../organisms/metrics';
+
+.simple-text {
+  &:not(
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p.has-headline-5-font-size,
+      p.metric__description,
+      span.metric__value,
+      h1 > strong,
+      h2 > strong,
+      h3 > strong,
+      h4 > strong,
+      h5 > strong,
+      h6 > strong
+    ) {
+    @include typo-body-2;
+  }
+
+  .metrics_simple-text {
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  hr {
+    margin-top: 30px;
+  }
+
+  p,
+  b,
+  span:not(.article-page-cta-text__title),
+  .has-medium-font-size {
+    @include typo-body-2;
+  }
+
+  p.metrics__description {
+    @include typo-caption-3;
+  }
+
+  h1 {
+    margin-bottom: 60px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 48px;
+    }
+  }
+
+  * + h1 {
+    margin-top: 32px;
+  }
+
+  * + h2 {
+    margin-top: 80px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 60px;
+    }
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-bottom: 48px;
+  }
+
+  * + h3,
+  * + h4,
+  * + h5,
+  * + h6 {
+    margin-top: 48px;
+  }
+
+  * + p,
+  * + ul,
+  * + ol {
+    margin-top: 24px;
+  }
+
+  * + .metrics {
+    margin-top: 60px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 40px;
+    }
+  }
+
+  .metrics + * {
+    margin-top: 80px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 60px;
+    }
+  }
+
+  ol {
+    counter-reset: list-counter;
+    display: flex;
+    flex-direction: column;
+    row-gap: 32px;
+
+    @include media-breakpoint-down(lg) {
+      row-gap: 28px;
+    }
+
+    & > li {
+      counter-increment: list-counter;
+      position: relative;
+      padding-left: 33px;
+
+      @include media-breakpoint-down(lg) {
+        padding-left: 27px;
+      }
+
+      &::before {
+        content: counter(list-counter) '.';
+        position: absolute;
+        top: 0;
+        left: 8px;
+      }
+    }
+
+    ul {
+      margin-top: 32px;
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 27px;
+      }
+
+      li {
+        padding-left: unset;
+
+        &::before {
+          left: -20px;
+
+          @include media-breakpoint-down(lg) {
+            left: -16px;
+          }
+        }
+      }
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    row-gap: 33px;
+
+    @include media-breakpoint-down(lg) {
+      row-gap: 28px;
+    }
+
+    li:not(.metric) {
+      position: relative;
+      padding-left: 33px;
+
+      @include media-breakpoint-down(lg) {
+        padding-left: 27px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 14px;
+        left: 12px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: $black;
+
+        @include media-breakpoint-down(lg) {
+          top: 11px;
+          left: 10px;
+          width: 6px;
+          height: 6px;
+        }
+      }
+    }
+  }
+
+  a {
+    display: inline-block;
+    color: #215efe;
+  }
+
+  img {
+    margin: 80px 0;
+    display: block;
+
+    @include media-breakpoint-down(lg) {
+      margin: 48px 0;
+    }
+  }
+
+  figure,
+  figure.wp-block-image {
+    margin: 80px 0;
+
+    @include media-breakpoint-down(lg) {
+      margin: 48px 0;
+    }
+
+    img {
+      margin: unset;
+      display: initial;
+
+      @include media-breakpoint-down(lg) {
+        margin: unset;
+      }
+    }
+  }
+
+  figure.wp-block-image {
+    &.alignleft,
+    &.aligncenter,
+    &.alignright {
+      display: block;
+    }
+
+    &.aligncenter {
+      text-align: center;
+    }
+
+    &.alignright {
+      text-align: right;
+    }
+  }
+
+  .review-card__photo img {
+    margin: unset;
+  }
+
+  blockquote,
+  .post-testimonial {
+    margin: 104px 0;
+    @include blockquote;
+
+    .review-card__name {
+      @include typo-caption-3;
+    }
+
+    .review-card__occupation {
+      @include typo-caption-2;
+      opacity: 0.7;
+    }
+
+    @include media-breakpoint-down(lg) {
+      margin: 60px 0;
+    }
+  }
+
+  &_article-page {
+    h1,
+    h2 {
+      margin-bottom: 80px;
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 60px;
+      }
+    }
+
+    * + p,
+    * + ul,
+    * + ol {
+      margin-top: 34px;
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 27px;
+      }
+    }
+
+    p {
+      margin-bottom: 34px;
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 27px;
+      }
+    }
+
+    * + ul,
+    * + ol {
+      margin: 48px 0;
+      row-gap: unset;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+      & + p,
+      & + ul,
+      & + ol {
+        margin-top: 24px;
+      }
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+      & + * {
+        margin-top: 24px;
+      }
+    }
+
+    a:not(.btn) {
+      text-decoration: underline;
+    }
+
+    * + p.has-headline-5-font-size {
+      margin-top: 80px;
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 60px;
+      }
+    }
+
+    p.has-headline-5-font-size + * {
+      margin-top: 20px;
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 24px;
+      }
+    }
+
+    .article-page-cta-text {
+      margin: 112px 208px 112px -208px;
+
+      @include media-breakpoint-down(xxl) {
+        margin: 112px 80px 112px -80px;
+      }
+
+      @include media-breakpoint-down(xl) {
+        margin: 112px 0;
+      }
+
+      @include media-breakpoint-down(lg) {
+        margin: 92px 0;
+      }
+    }
+
+    * + .highlighted-section {
+      margin: 80px 0;
+
+      @include media-breakpoint-down(lg) {
+        margin: 60px 0;
+      }
+    }
+
+    .highlighted-section {
+      margin-bottom: 80px;
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 60px;
+      }
+    }
+
+    .accordion {
+      margin-top: 80px;
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 60px;
+      }
+
+      .container {
+        padding-left: unset;
+        padding-right: unset;
+      }
+    }
+
+    .accordion + * {
+      margin-top: 80px;
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 60px;
+      }
+    }
+  }
+
+  &_post {
+    h2 {
+      margin-bottom: 48px;
+    }
+
+    .article-page-cta-text {
+      margin-top: 128px;
+      margin-bottom: 128px;
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 84px;
+        margin-bottom: 84px;
+      }
+    }
+
+    blockquote,
+    .post-testimonial {
+      margin: 80px 0;
+
+      .review-card__name {
+        @include typo-caption-3;
+      }
+
+      .review-card__occupation {
+        @include typo-caption-2;
+        opacity: 0.7;
+      }
+
+      @include media-breakpoint-down(lg) {
+        margin: 60px 0;
+      }
+    }
+  }
+}

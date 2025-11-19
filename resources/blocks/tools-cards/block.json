@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/tools-cards",
+  "title": "Tools Cards",
+  "category": "theme",
+  "icon": "screenoptions",
+  "acf": {
+    "mode": "edit"
+  },
+  "supports": {
+    "align": false,
+    "jsx": true
+  },
+  "style": "tools-cards"
+}

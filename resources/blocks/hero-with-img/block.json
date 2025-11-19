@@ -1,0 +1,16 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/hero-with-image",
+  "title": "Hero With Image",
+  "category": "theme",
+  "allowedBlocks": ["core/heading", "core/paragraph", "core/list", "acf/button"],
+  "icon": "format-image",
+  "acf": {
+    "mode": "preview"
+  },
+  "supports": {
+    "align": false,
+    "jsx": true
+  },
+  "style": "hero-with-img"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "sage",
+  "private": true,
+  "browserslist": [
+    "extends @roots/browserslist-config"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "bud dev",
+    "build": "bud build",
+    "translate": "npm run translate:pot && npm run translate:update",
+    "translate:pot": "wp i18n make-pot . ./resources/lang/sage.pot --include=\"theme.json,patterns,app,resources\"",
+    "translate:update": "for file in ./resources/lang/*.po; do wp i18n update-po ./resources/lang/sage.pot $file; done",
+    "translate:compile": "npm run translate:mo && npm run translate:js",
+    "translate:js": "wp i18n make-json ./resources/lang --pretty-print",
+    "translate:mo": "wp i18n make-mo ./resources/lang ./resources/lang",
+    "format-staged-views": "git diff --cached --name-only --relative | grep '^resources/views/' | xargs prettier --write | grep -v \"unchanged\" | awk '{print $1}' | while read -r file; do git diff \"$file\"; done",
+    "prepare": "cd ../../../.. && husky wordpress/wp-content/themes/stay-ai-theme/.husky"
+  },
+  "lint-staged": {
+    "*.blade.php": [
+      "prettier --check",
+      "git diff"
+    ]
+  },
+  "devDependencies": {
+    "@roots/bud": "6.24.0",
+    "@roots/bud-sass": "6.24.0",
+    "@roots/sage": "6.24.0",
+    "bootstrap": "5.3.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.11",
+    "prettier": "^3.4.2",
+    "prettier-plugin-blade": "^2.1.19"
+  },
+  "dependencies": {
+    "swiper": "^11.1.15",
+    "youtube-player": "^5.6.0"
+  }
+}

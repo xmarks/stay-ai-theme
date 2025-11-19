@@ -1,0 +1,43 @@
+.container-template {
+  width: 100%;
+
+  .acf-innerblocks-container {
+    .container,
+    .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .tag + * {
+      margin-top: 32px;
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 24px;
+      }
+    }
+
+    .wp-block-heading + * {
+      margin-top: 40px;
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 24px;
+      }
+    }
+
+    p + p {
+      margin-top: 36px;
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 20px;
+      }
+    }
+
+    * + a.btn {
+      margin-top: 60px;
+
+      @include media-breakpoint-down(lg) {
+        margin-top: 36px;
+      }
+    }
+  }
+}

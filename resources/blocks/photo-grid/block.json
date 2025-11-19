@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/photo-grid",
+  "title": "Photo Grid",
+  "category": "theme",
+  "icon": "images-alt2",
+  "acf": {
+    "mode": "preview"
+  },
+  "supports": {
+    "align": false,
+    "jsx": true
+  },
+  "style": "photo-grid"
+}

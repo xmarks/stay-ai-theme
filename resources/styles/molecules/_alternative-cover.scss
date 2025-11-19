@@ -1,0 +1,47 @@
+.alternative-cover {  
+  position: relative;
+
+  &__wrapper {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 22px;
+    padding: 16px 32px;
+    width: 100%;
+    height: 100%;
+
+    @include media-breakpoint-down(lg) {
+      row-gap: 16px;
+    }
+  }
+
+  &__icon {
+    width: 36px;
+    height: 36px;
+    mask-image: url($icons + '/union.svg');
+    mask-position: center;
+    mask-size: cover;
+    background-color: $white;
+  }
+
+  &__text {
+    text-align: center;
+    color: $white;
+    font-size: 31px;
+    line-height: 31px;
+    font-weight: 550;
+    letter-spacing: -0.02em;
+    @include typography;
+    @include text-wrap(4);
+
+    @include media-breakpoint-down(xxl) {
+      font-size: 22px;
+      line-height: 22px;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.article-page-heading {
+  margin: 140px 0 0;
+    
+  @include media-breakpoint-down(lg) {
+    margin: 80px 0 0;
+  }
+  
+  &__info {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 32px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 24px;
+    }
+
+    span {
+      display: block;
+      color: rgba($black, 0.7);
+    }
+
+    &-read-time {
+      position: relative;
+      padding-right: 9px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        translate: 0 -50%;
+        width: 1px;
+        height: 13px;
+        background-color: rgba($black, 0.7);
+      }
+    }
+  }
+}

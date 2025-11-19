@@ -1,0 +1,49 @@
+.case-study-preview-card {
+  color: inherit;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @include media-breakpoint-down(lg) {
+      gap: 24px;
+    }
+  }
+
+  &__img {
+    overflow: hidden;
+    border-radius: 20px;
+    @include aspect-ratio-pseudo(458, 297);
+
+    @include media-breakpoint-down(lg) {
+      @include aspect-ratio-pseudo(343, 210);
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    @include media-breakpoint-down(lg) {
+      padding: 0 8px;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 8px;
+    color: $pink-06;
+  }
+
+  &__tag {
+  }
+
+  &__title {
+  }
+}

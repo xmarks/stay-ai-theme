@@ -1,0 +1,26 @@
+.info-badge {
+  padding: 16px;
+  border-radius: 12px;
+  background-color: $white;
+  box-shadow: 0px 22.34px 17.87px 0px rgba(131, 72, 113, 0.1);
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > * {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}

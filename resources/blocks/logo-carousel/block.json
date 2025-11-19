@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/logo-carousel",
+  "title": "Logo Carousel",
+  "category": "theme",
+  "icon": "images-alt",
+  "acf": {
+    "mode": "edit"
+  },
+  "supports": {
+    "align": false,
+    "jsx": true
+  },
+  "style": "logo-carousel"
+}

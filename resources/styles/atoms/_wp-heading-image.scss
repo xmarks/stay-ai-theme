@@ -1,0 +1,9 @@
+.wp-block-heading {
+  img[class*='wp-image-'] {
+    margin: 12px 4px 0 5px;
+
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+}

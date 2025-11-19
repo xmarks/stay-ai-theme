@@ -1,0 +1,28 @@
+@import '../molecules/pricing-card';
+
+.pricing-cards {
+  padding: 120px 0 100px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 48px 0;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 20px;
+
+    &_one {
+      grid-template-columns: 1fr;
+    }
+
+    &_two {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/info-badges",
+  "title": "Info Badges",
+  "category": "theme",
+  "parent": ["acf/hero-with-image"],
+  "icon": "info-outline",
+  "acf": {
+    "mode": "preview",
+    "postTypes": ["app_resource"]
+  },
+  "supports": {
+    "align": false,
+    "jsx": true
+  },
+  "style": "info-badges"
+}

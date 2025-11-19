@@ -1,0 +1,214 @@
+@import '../molecules/cky-accordion-wrapper';
+
+.cky-modal {
+  outline: none;
+  width: 640px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:
+    0px 16px 16px 0px #3a042214,
+    0px 64px 64px 0px #3a042214,
+    0px 32px 32px 0px #3a042214;
+
+  @include media-breakpoint-down(md) {
+    width: calc(100% - 24px);
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  &.cky-modal-open {
+    @include media-breakpoint-down(md) {
+      top: unset !important;
+      bottom: 12px;
+      transform: translate(-50%, 0) !important;
+    }
+
+    @include media-breakpoint-down(sm) {
+    }
+  }
+
+  .cky-preference {
+    &-center {
+      max-height: 78vh;
+
+      @include media-breakpoint-down(md) {
+        max-height: 86.6vh;
+      }
+    }
+
+    &-header {
+      position: relative;
+      padding: 24px 24px 16px;
+      display: flex;
+      justify-content: center;
+      border-bottom: unset;
+
+      @include media-breakpoint-down(md) {
+        padding: 24px 20px;
+        justify-content: flex-start;
+      }
+
+      .cky-preference-title {
+        @include typo-subtitle-1;
+      }
+
+      .cky-btn-close {
+        position: absolute;
+        top: 55%;
+        right: 24px;
+        translate: 0 -50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 24px;
+        height: 24px;
+
+        @include media-breakpoint-down(md) {
+          display: none;
+        }
+
+        img {
+          display: none;
+        }
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          translate: -50% -50%;
+          width: 2px;
+          height: 21px;
+          background-color: $black;
+        }
+
+        &::before {
+          rotate: 45deg;
+        }
+
+        &::after {
+          rotate: -45deg;
+        }
+      }
+    }
+
+    &-body-wrapper {
+      margin-top: 24px;
+      padding: unset;
+
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+
+      &::-webkit-scrollbar-track {
+        border-radius: 12px;
+        background-color: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 12px;
+        background-color: rgba($black, 0.1);
+      }
+
+      @include media-breakpoint-down(md) {
+        margin-top: unset;
+      }
+
+      .cky-preference-content-wrapper {
+        margin-bottom: 24px;
+        padding: 0 24px;
+        border-bottom: unset;
+
+        @include media-breakpoint-down(md) {
+          padding: 0 20px;
+          margin-bottom: 12px;
+        }
+
+        * {
+          @include typo-body-2;
+        }
+      }
+
+      .cky-show-desc-btn {
+        display: block;
+        color: #2549ff;
+      }
+    }
+  }
+
+  .cky-footer-wrapper {
+    .cky-footer-shadow {
+      display: none;
+    }
+
+    .cky-prefrence-btn-wrapper {
+      padding: 32px 24px 24px;
+      flex-wrap: nowrap;
+      gap: 8px;
+
+      @include media-breakpoint-down(md) {
+        flex-wrap: wrap;
+        padding: 24px 20px;
+        gap: 10px;
+      }
+    }
+
+    .cky-btn {
+      margin: unset;
+      @include btn;
+      min-width: unset;
+      border: none;
+
+      @include media-breakpoint-down(md) {
+        padding: 14px 32px;
+      }
+    }
+
+    .cky-btn-preferences {
+      color: $pink-06 !important;
+      background-color: $pink-01 !important;
+      transition: background-color $delaySm ease;
+
+      @media (hover: hover) {
+        &:hover {
+          opacity: 1;
+          background-color: $pink-02 !important;
+          color: $pink-05 !important;
+        }
+      }
+    }
+
+    .cky-btn-preferences {
+      padding: 16px 31px;
+      width: 100%;
+
+      @include media-breakpoint-down(md) {
+        order: 2;
+      }
+    }
+
+    .cky-btn-accept {
+      width: 100%;
+      color: $white !important;
+      background: $primary-gradient-button !important;
+      background-size: 170% 100% !important;
+      background-position: left center !important;
+
+      @include media-breakpoint-down(md) {
+        order: 1;
+      }
+
+      @media (max-width: 440px) {
+        margin-top: unset;
+      }
+
+      @media (hover: hover) {
+        &:hover {
+          opacity: 1;
+          background-position: right center !important;
+        }
+      }
+    }
+  }
+}

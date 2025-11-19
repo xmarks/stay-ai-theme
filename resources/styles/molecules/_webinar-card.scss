@@ -1,0 +1,52 @@
+.webinar-card {
+  color: inherit;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__img {
+    overflow: hidden;
+    border-radius: 20px;
+    @include aspect-ratio-pseudo(458, 258);
+
+    @include media-breakpoint-down(lg) {
+      border-radius: 12px;
+    }
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  &__tags {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 5px;
+  }
+
+  &__tag {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 12px;
+    width: fit-content;
+    border-radius: 60px;
+    color: $pink-06;
+    background-color: $pink-01;
+
+    @include media-breakpoint-down(lg) {
+      padding: 2px 8px;
+    }
+  }
+
+  &__title {
+  }
+}

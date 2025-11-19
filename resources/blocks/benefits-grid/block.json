@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/benefits-grid",
+  "title": "Benefits Grid",
+  "category": "theme",
+  "icon": "analytics",
+  "acf": {
+    "mode": "edit"
+  },
+  "supports": {
+    "align": false,
+    "jsx": true
+  },
+  "style": "benefits-grid"
+}

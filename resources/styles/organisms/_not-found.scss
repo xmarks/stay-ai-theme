@@ -1,0 +1,144 @@
+.not-found {
+  min-height: calc(100vh - 84px);
+  padding: 85px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url($images + '/static/not-found-page-bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: clip;
+
+  @include media-breakpoint-down(lg) {
+    min-height: calc(100vh - 56px);
+    background-position: top left;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 170px;
+    line-height: 1.05;
+    letter-spacing: 0.05em;
+    margin-bottom: 44px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 118px;
+      letter-spacing: 0;
+      margin-bottom: 25px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 24px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text {
+    opacity: 0.6;
+
+    @include media-breakpoint-down(lg) {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    gap: 20px;
+
+    @include media-breakpoint-down(xxl) {
+      flex-wrap: wrap;
+    }
+
+    @include media-breakpoint-down(lg) {
+      flex-direction: column;
+      margin-top: 32px;
+      gap: 8px;
+    }
+  }
+
+  &__link {
+    width: 100%;
+    background-color: $white;
+    border-radius: 20px;
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    box-shadow:
+      0px 41.778px 33.422px 0px rgba(131, 72, 113, 0.05),
+      0px 22.336px 17.869px 0px rgba(131, 72, 113, 0.04),
+      0px 12.522px 10.017px 0px rgba(131, 72, 113, 0.04),
+      0px 6.65px 5.32px 0px rgba(131, 72, 113, 0.03),
+      0px 2.767px 2.214px 0px rgba(131, 72, 113, 0.02);
+
+    @include media-breakpoint-down(xxl) {
+      width: auto;
+      gap: 40px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+      padding: 16px;
+      border-radius: 12px;
+      gap: 12px;
+    }
+
+    svg {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+    }
+
+    &-content {
+      display: flex;
+      align-items: center;
+      text-align: left;
+      gap: 12px;
+
+      @include media-breakpoint-down(lg) {
+        gap: 8px;
+      }
+
+      span {
+        color: $black;
+      }
+    }
+
+    &-arrow {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+      background-color: $charcoal-01;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include media-breakpoint-down(lg) {
+        height: 32px;
+        width: 32px;
+      }
+
+      svg {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+}

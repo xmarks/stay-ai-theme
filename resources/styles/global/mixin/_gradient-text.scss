@@ -1,0 +1,6 @@
+@mixin gradient-text {
+  background: $primary-gradient-button;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-color: black;
+}

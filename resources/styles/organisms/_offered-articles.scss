@@ -1,0 +1,28 @@
+@import '../molecules/webinar-card';
+
+.offered-articles {
+  &__container {
+    --column: 3;
+    --row-gap: 80px;
+    display: grid;
+    grid-template-columns: repeat(var(--column), 1fr);
+    column-gap: 32px;
+    row-gap: var(--row-gap);
+
+    @include media-breakpoint-down(lg) {
+      --column: 1;
+      --row-gap: 40px;
+    }
+
+    .empty-resources {
+      grid-column: 1 / -1;
+    }
+  }
+
+  .load-more-articles {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}

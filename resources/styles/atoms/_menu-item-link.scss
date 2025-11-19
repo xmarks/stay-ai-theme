@@ -1,0 +1,90 @@
+.menu-item-link {
+  display: flex;
+  padding: 8px;
+  border-radius: 8px;
+  color: rgba($black, 0.7);
+  background-color: transparent;
+  transition:
+    background-color $delaySm ease,
+    color $delaySm ease;
+
+  @include media-breakpoint-down(xxl) {
+    padding: 6px;
+  }
+
+  @include media-breakpoint-down(xl) {
+    padding: 4px;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 8px;
+  }
+
+  .icon {
+    flex-shrink: 0;
+    margin-right: 12px;
+    width: 24px;
+    height: 24px;
+    mask-position: center;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    background-color: currentColor;
+
+    @include media-breakpoint-down(xxl) {
+      margin-right: 8px;
+      width: 20px;
+      height: 20px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      margin-right: 12px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .text {
+    p {
+      white-space: nowrap;
+
+      @include media-breakpoint-down(lg) {
+        white-space: unset;
+      }
+    }
+
+    p:first-child {
+      transition: color $delaySm ease;
+      @include typo-body-2;
+
+      @include media-breakpoint-down(xxl) {
+        font-size: 16px;
+      }
+
+      @include media-breakpoint-down(lg) {
+        @include typo-body-1;
+      }
+    }
+
+    p:nth-child(2) {
+      margin-top: 6px;
+      color: rgba($black, 0.7);
+      @include typo-caption-2;
+
+      @include media-breakpoint-down(lg) {
+        margin-top: unset;
+        @include typo-body-2;
+      }
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      color: $pink-06;
+      background-color: $pink-01;
+
+      .text p:first-child {
+        color: $pink-06;
+      }
+    }
+  }
+}

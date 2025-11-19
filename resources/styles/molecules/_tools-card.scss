@@ -1,0 +1,36 @@
+.tools-card {
+  width: 100%;
+  background-color: $white;
+  border-radius: 20px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow:
+    0px 41.778px 33.422px 0px rgba(131, 72, 113, 0.05),
+    0px 22.336px 17.869px 0px rgba(131, 72, 113, 0.04),
+    0px 12.522px 10.017px 0px rgba(131, 72, 113, 0.04),
+    0px 6.65px 5.32px 0px rgba(131, 72, 113, 0.03),
+    0px 2.767px 2.214px 0px rgba(131, 72, 113, 0.02);
+
+  @include media-breakpoint-down(lg) {
+    padding: 16px;
+    border-radius: 12px;
+    gap: 12px;
+  }
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+    mask-position: center;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    background-color: $pink-06;
+  }
+
+  svg {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+  }
+}
