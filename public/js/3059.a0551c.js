@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_roots_bud_sage=self.webpackChunk_roots_bud_sage||[]).push([[3059],{"./scripts/utils/extract-yt-video-id.js":(t,s,e)=>{e.r(s),e.d(s,{extractYTVideoID:()=>o});const o=t=>{const s=t.match(/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:watch\?v=|embed\/|v\/|shorts\/)|youtu\.be\/)([^#\&\?]{11})/);return s?s[1]:void 0}}}]);

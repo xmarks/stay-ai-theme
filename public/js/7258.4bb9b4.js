@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_roots_bud_sage=self.webpackChunk_roots_bud_sage||[]).push([[7258],{"./scripts/filters/button.filter.js":(e,t,s)=>{s.r(t),s.d(t,{callback:()=>n,hook:()=>o,name:()=>l});const o="blocks.registerBlockType",l="sage/button";function n(e,t){return"core/button"!==t?e:{...e,styles:[{label:"Outline",name:"outline"}]}}}}]);
