@@ -9,7 +9,8 @@
   },
   "supports": {
     "align": false,
-    "jsx": true
+    "jsx": true,
+    "customClassName": true
   },
   "style": "container-template"
 }

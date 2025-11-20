@@ -1,0 +1,28 @@
+// test utility
+.inner-block--has-frame {
+
+  .acf-innerblocks-container {
+    padding : 24px;
+
+    @include media-breakpoint-down(lg) {
+      padding : 8px;
+    }
+  }
+}
+
+.inner-block--has-shadow {
+  --borderRadiusFrame : 33px;
+
+  @include media-breakpoint-down(lg) {
+    --borderRadiusFrame : 12px;
+  }
+
+  .acf-innerblocks-container {
+    border-radius : var(--borderRadiusFrame);
+    box-shadow    : 0px 2px 67.256px rgba(122, 0, 53, 0.01),
+    0px 11px 40.257px rgba(122, 0, 53, 0.1),
+    0px 1px 9.33px rgba(122, 0, 53, 0.01),
+    0px 12px 8.476px rgba(122, 0, 53, 0.02),
+    0px 11px 27.367px rgba(122, 0, 53, 0);
+  }
+}
