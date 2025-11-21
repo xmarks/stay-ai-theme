@@ -46,6 +46,7 @@ export default async (app) => {
     .entry('hero-with-img', ['@styles/organisms/_hero-with-img'])
     .entry('hubspot-form', ['@styles/organisms/_hubspot-form-wrapper'])
     .entry('logo-carousel', ['@styles/organisms/_logos-carousel'])
+    .entry('logos-case-studies', ['@styles/organisms/_logos-case-studies'])
     .entry('metrics', ['@styles/organisms/_metrics'])
     .entry('multi-column-cards', ['@styles/organisms/_multi-column-cards'])
     .entry('offered-articles', [

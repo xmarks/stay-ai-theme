@@ -206,6 +206,15 @@
     ],
     "dependencies": []
   },
+  "logos-case-studies": {
+    "js": [
+      "js/runtime.311235.js"
+    ],
+    "css": [
+      "css/logos-case-studies.de0227.css"
+    ],
+    "dependencies": []
+  },
   "metrics": {
     "js": [
       "js/runtime.311235.js"

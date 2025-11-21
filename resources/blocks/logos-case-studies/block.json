@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/logos-case-studies",
+  "title": "Logos - Case Studies",
+  "category": "theme",
+  "icon": "grid-view",
+  "acf": {
+    "mode": "preview"
+  },
+  "supports": {
+    "align": false,
+    "jsx": true
+  },
+  "style": "logos-case-studies"
+}
