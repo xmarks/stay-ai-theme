@@ -28,6 +28,9 @@
     aspect-ratio : 125 / 60;
     flex-shrink  : 0;
 
+    display      : grid;
+    place-items  : center;
+
     // Allow smaller logos on mobile if needed
     @include media-breakpoint-down(sm) {
       // width        : 100px;
@@ -35,12 +38,10 @@
     }
 
     img {
-      position   : absolute;
-      top        : 0;
-      left       : 0;
-      width      : 100%;
-      height     : 100%;
-      object-fit : contain;
+      max-height      : 100%;
+      max-width       : 100%;
+      object-fit      : contain;
+      object-position : center;
     }
   }
 
