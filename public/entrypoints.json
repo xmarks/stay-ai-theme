@@ -123,7 +123,7 @@
       "js/editor.48f707.js"
     ],
     "css": [
-      "css/editor.056544.css"
+      "css/editor.c03be7.css"
     ],
     "dependencies": [
       "react",
@@ -211,7 +211,7 @@
       "js/runtime.311235.js"
     ],
     "css": [
-      "css/logos-case-studies.a14227.css"
+      "css/logos-case-studies.ec34d3.css"
     ],
     "dependencies": []
   },
