@@ -18,6 +18,7 @@
     }
 
     @include media-breakpoint-down(sm) {
+      gap             : 15px;
       justify-content : center;
     }
   }
@@ -49,7 +50,7 @@
   &__link {
     position         : absolute;
     // inset            : auto auto -8px 50%;
-    inset            : auto 0% -11px auto;
+    inset            : auto 0% -16px auto;
     // transform        : translateX(-50%);
     z-index          : 1;
 
