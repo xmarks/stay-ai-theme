@@ -54,6 +54,15 @@
     ],
     "dependencies": []
   },
+  "buttons": {
+    "js": [
+      "js/runtime.311235.js"
+    ],
+    "css": [
+      "css/buttons.e9a71a.css"
+    ],
+    "dependencies": []
+  },
   "case-study-articles": {
     "js": [
       "js/runtime.311235.js"
@@ -123,7 +132,7 @@
       "js/editor.48f707.js"
     ],
     "css": [
-      "css/editor.c03be7.css"
+      "css/editor.1f8f5e.css"
     ],
     "dependencies": [
       "react",

@@ -1,0 +1,32 @@
+* + .buttons-wrapper {
+  margin-top: 60px;
+
+  @include media-breakpoint-down(lg) {
+    margin-top: 36px;
+  }
+}
+
+.buttons-wrapper {
+  display     : flex;
+  flex-wrap   : wrap;
+  gap         : 16px;
+  align-items : center;
+
+  &.aligncenter {
+    justify-content : center;
+  }
+
+  &.alignleft {
+    justify-content : flex-start;
+  }
+
+  &.alignright {
+    justify-content : flex-end;
+  }
+
+  // Force-remove margins from buttons inside wrapper
+  a.btn {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+}

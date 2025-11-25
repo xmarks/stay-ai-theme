@@ -20,6 +20,7 @@ export default async (app) => {
     .entry('benefits-grid', ['@styles/organisms/_benefits-grid'])
     .entry('bento-cards', ['@styles/organisms/_bento-cards'])
     .entry('brief-description', ['@styles/organisms/_brief-description'])
+    .entry('buttons', ['@styles/organisms/_buttons'])
     .entry('case-study-articles', [
       '@styles/organisms/_case-study-articles',
       '@styles/organisms/_load-more-articles',
