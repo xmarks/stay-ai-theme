@@ -1,0 +1,21 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/buttons",
+  "title": "Buttons",
+  "category": "design",
+  "icon": "button",
+  "acf": {
+    "mode": "edit"
+  },
+  "supports": {
+    "align": true,
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "center"
+    }
+  },
+  "style": "buttons"
+}
